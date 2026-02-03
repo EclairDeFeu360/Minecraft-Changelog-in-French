@@ -1,4 +1,4 @@
-![Noor tient en laisse un bébé lama dans une prairie. Ils se tiennent sous un bouleau avec une ruche. Un bébé abeille vole autour d’un bébé renard non loin.](https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/screenshots/26.1-snapshot-6_1170x500.jpg)
+![Noor tient en laisse un bébé lama dans une prairie. Ils se tiennent sous un bouleau avec une ruche. Un bébé abeille vole autour d’un bébé renard non loin.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/latest/image.png)
 ## [Minecraft 26.1 Snapshot 6](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-6)
 - Les oursons polaires n'attaquent plus les renards
 - Les bébés axolotls ont désormais une animation de « jouer le mort »
