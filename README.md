@@ -1,37 +1,17 @@
-![Noor tient en laisse un bébé lama dans une prairie. Ils se tiennent sous un bouleau avec une ruche. Un bébé abeille vole autour d’un bébé renard non loin.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/latest/image.png)
-## [Minecraft 26.1 Snapshot 6](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-6)
-- Les oursons polaires n'attaquent plus les renards
-- Les bébés axolotls ont désormais une animation de « jouer le mort »
-- Changement majeur dans le stockage des mondes :  
-  - De ce fait, les mondes doivent obligatoirement être mis à jour avant de pouvoir être joués, modifiés ou recréés
-  - Les dimensions sont stockées dans le dossier `dimensions/`, puis dans le nom de domaine de la dimension, puis dans le nom de la dimension
-  - Les advancements, données des joueurs et statistiques sont stockés dans le dossier `players/`, puis dans `advancements`, `data` ou `stats` respectivement
-  - Les packs de ressources sont stockés dans le dossier `resourcepacks/`
-  - Les tableaux de scores sont stockés dans le dossier `data/minecraft/scoreboard.dat`
-  - Les espaces de stockage de données sont stockés dans le dossier `data/`, puis dans le nom de domaine de l'espace, puis dans `/command_storage.dat`
-  - Le fichier `chunks.dat` a été renommé en `chunk_tickets.dat`
-  - Les cartes sont stockées dans le dossier `data/minecraft/maps/`, puis sous l'identifiant de la carte `.dat`
-  - Le fichier `idcounts.dat` a été renommé en `last_id.dat`
-  - `raids_end.dat` a été renommé en `raids.dat`
-  - Les structures sauvegardées par bloc de structure sont stockées dans le dossier `generated/`, puis dans le nom de domaine, puis dans `/structure/`, puis sous le nom de la structure `.nbt`
-  - Le `level.dat` a été refait et certaines données ont été sorties vers d'autres fichiers
-- DP version 99.0 :  
-  - Le champ `fallback` des fournisseurs d'état de blocs est désormais optionnel
-  - Les éléments de terrain `forest_rock`, `ice_spike`, et ceux pour générer des champignons géants ont été renommés et modifiés pour être plus configurables
-  - Les champs `alter_ground`, `force_dirt` et `dirt_provider` des éléments de terrain d'arbre ont été modifiés pour être des fournisseurs d'état de bloc
-  - Ajout du champ `has_ender_dragon_fight` dans les types de dimension pour définir si un combat contre le dragon de l’End peut avoir lieu
-  - Le tag de bloc `#dirt` a été divisé en plusieurs tags et est remplacé par `#substrate_overworld`
-  - Ajout des tags de blocs :  
-    - `#beneath_tree_podzol_replaceable` et `#beneath_bamboo_podzol_replaceable` pour définir quels blocs peuvent être remplacés par du podzol sous un arbre ou du bambou
-    - `#cannot_replace_below_tree_trunk` qui définit quels blocs ne seront pas remplacés sous un tronc
-    - `#forest_rock_can_place_on`, `#huge_brown_mushroom_can_place_on` et `#huge_red_mushroom_can_place_on` pour définir sur quels blocs peuvent être placés les rochers de forêts et les champignons géants
-    - `#ice_spike_replaceable` pour définir quels blocs peuvent être remplacés par une stalagmite de glace
-  - Ajout des tags d’objet `#mud`, `#moss_blocks` et `#grass_blocks` qui correspondent aux tags de blocs du même nom
-- RP version 80.0 :  
-  - Modification des modèles et textures des bébés abeilles, renardeau, chevreaux, bébé dromadaire, bébé tatou, oursons polaires et bébé lama
-  - Le modèle des bébés dromadaires momifiés a été retiré
-  - Ajout de sons de marche des poussins
-  - Les shaders `core/rendertype_item_entity_translucent_cull`, `core/rendertype_entity_alpha` et `core/rendertype_entity_decal` ont été remplacés par `core/entity`
-  - Ajout de la constante `DISSOLVE` dans le shader `core/entity`
-  - Le rendu des objets se fait désormais via le shader `core/item`
-- [15 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%206)
+![Un bébé villageois se tient en face d’un bébé zombie, chacun avec leurs nouveaux modèles de bébé ! Le bébé zombie porte un plastron en or. En fond, un village de taïga sur une montagne, et la lune se lève.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/latest/image.png)
+## [Minecraft 26.1 Snapshot 7](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-7)
+- Un bloc de musique sur un bloc de cuivre produit un son de trompette
+- Les pissenlits dorés peuvent être utilisés sur les bébés hoglins
+- L’écran de discussion est affiché différemment s’il est restreint dans les options
+- Le stockage des chunks dans la mémoire graphique et leur rendu a été refait
+- DP version 99.1 :  
+  - Les variantes des sons des cochons, chats, vaches et poulets peuvent être personnalisées
+- RP version 81.0 :  
+  - Ajout de variantes pour les sons des chats, cochons, vaches et poulets
+  - Les anciens sons des animaux cités ci-dessus ont été renommés en `classic`
+  - Le modèle et les textures des bébés zombie, momifié, noyé, piglin, piglin zombifié, villageois et zombie villageois ont été modifiés
+  - La texture des bébés mule et bébé âne a été modifiée
+  - Tous les modèles de blocs supportent des textures transparentes ou translucides
+  - Le champ `textures` des modèles de bloc a été mis à jour
+  - Les shaders `block.vsh` et `terrain.vsh` ne reçoivent plus les attributs de vertex `Normal`.
+- [19 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%207)
