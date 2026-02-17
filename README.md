@@ -1,4 +1,4 @@
-![Un bébé villageois se tient en face d’un bébé zombie, chacun avec leurs nouveaux modèles de bébé ! Le bébé zombie porte un plastron en or. En fond, un village de taïga sur une montagne, et la lune se lève.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/latest/image.png)
+![Un bébé villageois se tient en face d’un bébé zombie, chacun avec leurs nouveaux modèles de bébé ! Le bébé zombie porte un plastron en or. En fond, un village de taïga sur une montagne, et la lune se lève.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap7/image.png)
 ## [Minecraft 26.1 Snapshot 7](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-7)
 - Un bloc de musique sur un bloc de cuivre produit un son de trompette
 - Les pissenlits dorés peuvent être utilisés sur les bébés hoglins
