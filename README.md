@@ -1,17 +1,20 @@
-![Un bébé villageois se tient en face d’un bébé zombie, chacun avec leurs nouveaux modèles de bébé ! Le bébé zombie porte un plastron en or. En fond, un village de taïga sur une montagne, et la lune se lève.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap7/image.png)
-## [Minecraft 26.1 Snapshot 7](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-7)
-- Un bloc de musique sur un bloc de cuivre produit un son de trompette
-- Les pissenlits dorés peuvent être utilisés sur les bébés hoglins
-- L’écran de discussion est affiché différemment s’il est restreint dans les options
-- Le stockage des chunks dans la mémoire graphique et leur rendu a été refait
-- DP version 99.1 :  
-  - Les variantes des sons des cochons, chats, vaches et poulets peuvent être personnalisées
-- RP version 81.0 :  
-  - Ajout de variantes pour les sons des chats, cochons, vaches et poulets
-  - Les anciens sons des animaux cités ci-dessus ont été renommés en `classic`
-  - Le modèle et les textures des bébés zombie, momifié, noyé, piglin, piglin zombifié, villageois et zombie villageois ont été modifiés
-  - La texture des bébés mule et bébé âne a été modifiée
-  - Tous les modèles de blocs supportent des textures transparentes ou translucides
-  - Le champ `textures` des modèles de bloc a été mis à jour
-  - Les shaders `block.vsh` et `terrain.vsh` ne reçoivent plus les attributs de vertex `Normal`.
-- [19 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%207)
+![Deux pandas, un adulte et un bébé, se tiennent sur une colline herbeuse avec, en fond, le soleil couchant.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap8/image.png)
+## [Minecraft 26.1 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-8)
+- L’ardoise des abîmes peut être directement transformée en pierre, ardoise polie, ardoise taillée et ardoise carrelée dans le tailleur de pierre
+- La roche peut être directement transformée en pierre dans le tailleur de pierre
+- Le raccourci clavier Ctrl + Récupérer, sur un joueur ou un mannequin, affiche le même résultat que la commande `/fetchprofile` sur cette même entité
+- L’IME est désormais affiché en jeu au-dessus de tous les champs de texte
+- Le mode plein écran n’est plus en mode exclusif
+- Ajout du champ `detailed_memory` sur l’écran de débogage pour afficher des informations sur la mémoire utilisée
+- La taille du tas initiale, dans les options de la JVM, est par défaut à 2 Go
+- DP version 99.2 :
+  - Ajout de la sous-commande `entity` dans la commande `/fetchprofile` pour récupérer les informations du profil du joueur ou du mannequin
+  - Le composant de texte `minecraft:nbt` a été modifié :  
+    - Les tags résolus sans interprétation sont décorés
+    - Le contenu des champs `nbt` et `block` n’est pas silencieusement ignoré lorsque la résolution échoue
+    - Ajout du champ `plain` pour retirer la décoration d’un texte
+- RP version 81.1 :
+  - Les textures des chevaux au dos noir ont été modifiées
+  - Les modèles et les textures des bébés panda, hoglin, zoglin, arpenteur et renifleur ont été modifiés
+  - Ajout du sprite `gui/sprites/widget/preedit.png` pour l’IME
+- [21 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%208)
