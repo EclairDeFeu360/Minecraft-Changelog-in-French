@@ -1,10 +1,21 @@
-![Un bébé zombie et un bébé tatou, séparés par un pissenlit doré, regardant au loin.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap10/image.png)
-## [Minecraft 26.1 Snapshot 10](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-10)
-- Les particules que produisent les pissenlits d’oré lorsqu’ils sont donnés à un animal se déplacent vers le bas ou vers le haut, selon que le vieillissement est stoppé ou redémarré
-- Les entrées IME sont annulées lorsqu’aucun menu n’est affiché
-- La variable de débogage `sound_cache` a été ajoutée
-- DP version 99.3 :  
-  - Ajout des particules `pause_mob_growth` et `reset_mob_growth`.
-- RP version 82 :  
-  - Le modèle et la texture de la tête des bébés zombie, momifiés et noyés.
-- [18 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%2010)
+![Noor se tient en position accroupie dans une forêt de bouleaux, tenant une carotte ainsi qu'une carotte sur un bâton. Devant Noor, trois cochons un tempéré, un chaud et un froid l'observent. À l’arrière-plan, des abeilles transportent du pollen vers leur nid.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap11/image.png)
+## [Minecraft 26.1 Snapshot 11](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-11)
+- Les maîtres bibliothécaires échangent des bougies rouges et jaunes à la place des étiquettes
+- Les marchands ambulants échangent des étiquettes
+- Les étiquettes ne peuvent plus être trouvées dans les coffres de cités antiques ou les manoirs des bois
+- DP version 100.0 :
+  - Ajout du champ `eat_sound` dans les variantes de cochons
+  - Ajout de la définition de `timeline_attributes` dans les environnements de test du jeu pour définir les chronologies à utiliser
+  - La propriété `rotation` par défaut des états de blocs des bannières et panneaux est à 8
+  - Ajout du type de fournisseur d’état de bloc `rule_based_state_provider`
+  - Ajout du tag de bloc `#prevents_nearby_leaf_decay` qui définit quel type de bloc empêche les feuilles de se décomposer
+- RP version 83.0 :
+  - Ajout du champ `transformation` dans les modèles d’objet, qui permet de modifier la matrice du modèle
+  - Ajout de types de modèles spéciaux pour les cloches, les livres de table d’enchantement/pupitre, les lits, les bannières, les coffres et les panneaux ; à part la cloche, ils prennent tous des paramètres
+  - Le champ `orientation` du type de modèle spécial `minecraft:shulker` a été retiré
+  - Les états de bloc sont respectés lorsqu’ils sont rendus sous une forme non-bloc
+  - Les textures des lapins, bébés hoglins et bébés pandas ont été modifiées
+  - Ajout d’un son pour manger pour les cochons personnalisés
+  - Modification de l’animation de charge des chèvres
+  - Le son de trompette des blocs de musique a été modifié
+- [24 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%2011)
