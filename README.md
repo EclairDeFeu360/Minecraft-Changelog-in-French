@@ -3,7 +3,7 @@
 - Le panorama a été mis à jour
 - Le Minecraft Live a été annoncé :
   - <t:1774112409:R> le <t:1774112409:F>
-  - (le lien du trailer)[<https://youtu.be/3ntfjZGgm04>]
+  - [Le lien du trailer](<https://youtu.be/3ntfjZGgm04>)
 - DP version 101.0 :
   - Ajout de la sous-commande `rate` pour la commande `/time`, qui permet de définir un multiplicateur de vitesse pour une horloge de monde
   - Le composant de données `minecraft:provides_banner_patterns`, le champ `bypassed_by` du composant de données `minecraft:blocks_attacks`, le champ `type` du composant de données `minecraft:damage_resistant`, et le champ `options` de la fonction de butin `minecraft:set_instrument` acceptent un identifiant ou une liste d'identifiants
