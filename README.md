@@ -1,21 +1,21 @@
-![Noor se tient en position accroupie dans une forêt de bouleaux, tenant une carotte ainsi qu'une carotte sur un bâton. Devant Noor, trois cochons un tempéré, un chaud et un froid l'observent. À l’arrière-plan, des abeilles transportent du pollen vers leur nid.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-snap11/image.png)
-## [Minecraft 26.1 Snapshot 11](https://www.minecraft.net/en-us/article/minecraft-26-1-snapshot-11)
-- Les maîtres bibliothécaires échangent des bougies rouges et jaunes à la place des étiquettes
-- Les marchands ambulants échangent des étiquettes
-- Les étiquettes ne peuvent plus être trouvées dans les coffres de cités antiques ou les manoirs des bois
-- DP version 100.0 :
-  - Ajout du champ `eat_sound` dans les variantes de cochons
-  - Ajout de la définition de `timeline_attributes` dans les environnements de test du jeu pour définir les chronologies à utiliser
-  - La propriété `rotation` par défaut des états de blocs des bannières et panneaux est à 8
-  - Ajout du type de fournisseur d’état de bloc `rule_based_state_provider`
-  - Ajout du tag de bloc `#prevents_nearby_leaf_decay` qui définit quel type de bloc empêche les feuilles de se décomposer
-- RP version 83.0 :
-  - Ajout du champ `transformation` dans les modèles d’objet, qui permet de modifier la matrice du modèle
-  - Ajout de types de modèles spéciaux pour les cloches, les livres de table d’enchantement/pupitre, les lits, les bannières, les coffres et les panneaux ; à part la cloche, ils prennent tous des paramètres
-  - Le champ `orientation` du type de modèle spécial `minecraft:shulker` a été retiré
-  - Les états de bloc sont respectés lorsqu’ils sont rendus sous une forme non-bloc
-  - Les textures des lapins, bébés hoglins et bébés pandas ont été modifiées
-  - Ajout d’un son pour manger pour les cochons personnalisés
-  - Modification de l’animation de charge des chèvres
-  - Le son de trompette des blocs de musique a été modifié
-- [24 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Snapshot%2011)
+![Un bébé zombie avec un casque en fer tient une hache en fer sur une plage de sable sous la lune, pendant la nuit.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-pre1/image.png)
+## [Minecraft 26.1 Pre-Release 1](https://www.minecraft.net/en-us/article/minecraft-26-1-pre-release-1)
+- Le panorama a été mis à jour
+- Le Minecraft Live a été annoncé :
+  - <t:1774112409:R> le <t:1774112409:F>
+  - (le lien du trailer)[<https://youtu.be/3ntfjZGgm04>]
+- DP version 101.0 :
+  - Ajout de la sous-commande `rate` pour la commande `/time`, qui permet de définir un multiplicateur de vitesse pour une horloge de monde
+  - Le composant de données `minecraft:provides_banner_patterns`, le champ `bypassed_by` du composant de données `minecraft:blocks_attacks`, le champ `type` du composant de données `minecraft:damage_resistant`, et le champ `options` de la fonction de butin `minecraft:set_instrument` acceptent un identifiant ou une liste d'identifiants
+  - Ajout du prédicat `minecraft:environment_attribute_check` qui permet de poser une condition sur une valeur de variable d'environnement
+  - Ajout du fournisseur de nombre `minecraft:environment_attribute` qui fournit la valeur d'une variable d'environnement
+  - Les éléments de terrain générés par de la poudre d'os ne sont plus limités à l'élément de terrain `flower`, mais au tag d'élément de terrain configuré `can_spawn_from_bone_meal`
+  - Les éléments de terrain `flower`, `flower_no_bonemeal` et `random_patch` ont été retirés
+  - Ajout du fournisseur d'entier `trapezoid` qui fournie un entier aléatoire selon une distribution trapezoïdale
+  - Ajout du champ `fallback` dans le composant de texte  `minecraft:object` qui permet de définir un composant de texte qui sera utilisé dans le cas où le composant `minecraft:object` ne peut pas être utilisé
+  - Les composants de texte `object` de type `player` ne peuvent plus être utilisés dans les MOTD
+- RP version 84.0 :
+  - La texture des louveteaux a été modifiée
+  - Ajout du type de modèle spécial d'objet `minecraft:end_cube` pour afficher une texture de portail de l'End
+  - Le shader `core/rendertype_translucent_moving_block` a été remplacé par `core/block`
+- [25 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Pre-Release%201)
