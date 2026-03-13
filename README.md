@@ -1,21 +1,8 @@
-![Un bébé zombie avec un casque en fer tient une hache en fer sur une plage de sable sous la lune, pendant la nuit.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-pre1/image.png)
-## [Minecraft 26.1 Pre-Release 1](https://www.minecraft.net/en-us/article/minecraft-26-1-pre-release-1)
-- Le panorama a été mis à jour
-- Le Minecraft Live a été annoncé :
-  - <t:1774112409:R> le <t:1774112409:F>
-  - [Le lien du trailer](<https://youtu.be/3ntfjZGgm04>)
-- DP version 101.0 :
-  - Ajout de la sous-commande `rate` pour la commande `/time`, qui permet de définir un multiplicateur de vitesse pour une horloge de monde
-  - Le composant de données `minecraft:provides_banner_patterns`, le champ `bypassed_by` du composant de données `minecraft:blocks_attacks`, le champ `type` du composant de données `minecraft:damage_resistant`, et le champ `options` de la fonction de butin `minecraft:set_instrument` acceptent un identifiant ou une liste d'identifiants
-  - Ajout du prédicat `minecraft:environment_attribute_check` qui permet de poser une condition sur une valeur de variable d'environnement
-  - Ajout du fournisseur de nombre `minecraft:environment_attribute` qui fournit la valeur d'une variable d'environnement
-  - Les éléments de terrain générés par de la poudre d'os ne sont plus limités à l'élément de terrain `flower`, mais au tag d'élément de terrain configuré `can_spawn_from_bone_meal`
-  - Les éléments de terrain `flower`, `flower_no_bonemeal` et `random_patch` ont été retirés
-  - Ajout du fournisseur d'entier `trapezoid` qui fournie un entier aléatoire selon une distribution trapezoïdale
-  - Ajout du champ `fallback` dans le composant de texte  `minecraft:object` qui permet de définir un composant de texte qui sera utilisé dans le cas où le composant `minecraft:object` ne peut pas être utilisé
-  - Les composants de texte `object` de type `player` ne peuvent plus être utilisés dans les MOTD
-- RP version 84.0 :
-  - La texture des louveteaux a été modifiée
-  - Ajout du type de modèle spécial d'objet `minecraft:end_cube` pour afficher une texture de portail de l'End
-  - Le shader `core/rendertype_translucent_moving_block` a été remplacé par `core/block`
-- [25 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Pre-Release%201)
+![Un bébé axolotl dans un seau d'eau géant, un bébé cheval et un bébé chat se tiennent dans un bosquet de cerisiers.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1-pre2/image.png)
+## [Minecraft 26.1 Pre-Release 2](https://www.minecraft.net/en-us/article/minecraft-26-1-pre-release-2)
+- Modification de la vitesse de descente des lances
+- La taille des modèles des bébés chats et bébés chevaux ont été modifiée
+- Ajout d'une option d'affichage du jeu en mode plein écran exclusif
+- Les maîtres bibliothécaires ont toujours un échange de livres enchantés
+- Les composants de texte dans les MOTD imbriqués plus de 16 fois sont ignorés
+- [29 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.1%20Pre-Release%202)
