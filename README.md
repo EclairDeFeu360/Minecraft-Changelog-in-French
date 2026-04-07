@@ -1,5 +1,57 @@
-![Kai éteint un feu dans une forêt sombre tandis que des poussins, des cochons et des tortues se rassemblent sur la plage pluvieuse au premier plan.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1.1/image.png)
-## [Minecraft 26.1.1](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-1-1)
-- [Liste du bug fixé](https://mojira.dev/?project=MC&fix_version=26.1.1%20Release%20Candidate%201)
-- DP version 101.1
-- RP version 84.0
+![Makena, tenant un bloc de laine rose, s'approche d'un cube de soufre dans un biome de caverne de soufre. Derrière eux, on aperçoit un banc de poulpes luisants dans l'eau. On peut également voir de la lave, tant au premier plan que sous forme d'un écoulement tombant dans l'eau.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap1/image.png)
+## [Minecraft 26.2 Snapshot 1](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-1)
+- Le jeu est rendu via Vulkan, OpenGL peut toujours être utilisé
+- Ajout d'une option vidéo "API graphique"
+- Ajout du biome de cavernes de soufre
+- Ajout source sulfureuse, des éléments de terrain qui se génére à la surface au dessus des caverne de soufre
+- Ajout du cube de soufre, une créature qui change de physique en fonction du bloc qui lui est donné
+- Ajout des blocs de cinabre, de soufre et toutes leurs variantes
+- Ajout du bloc de soufre concentré, qui quand il est sous l'eau produit un nuage provoquant des nausées
+- La fréquence de vibration des entités qui rebondissent est de 2
+- Le profilage du jeu avec Tracy inclut les temps d'exécution du GPU
+- Le rendu utilise désormais un tampon de profondeur inversé
+- Ajout du registre `minecraft:sulfur_cube_archetype` qui défini un bloc est la physique qu'il appliquera sur un cube de soufre 
+- DP version 101.2
+  - Lorsque plusieurs progrès sont attribué ou supprimé la commande indique le nombre de progrès changé pour l'ensemble des joueurs
+  - Lorsqu'un progrès ou critère est attribué ou supprimé la commande indique le nombre de joueur concernés par ces modifications
+  - Ajout des attribues :
+    - `minecraft:bounciness` pour définir le taux de conservation de velocité après un rebond
+    - `minecraft:friction_modifier` pour définir le taux de friction du sol
+    - `minecraft:air_drag_modifier` pour définir la friction dans l'air
+  - La valeur minimal de l'attribu `minecraft:knockback_resistance` est de -2.0
+  - Ajout du composants de donnée `minecraft:sulfur_cube_content` qui défini l'objet absorbé par les cube de soufre
+  - Les champs et nom des éléments de terrain des stalactites on été renomé pour remplacer stalactites par spéléothèmes
+  - Ajout des champs `replaceable_blocks` dans les éléments de terrain `speleothem`, `speleothem_cluster` et `large_dripstone` pour définir sur quelles blocs ces éléments de terrain peuvent se générer
+  - Ajout des champs `base_block` et `pointed_block` dans les éléments de terrain `speleothem` et `speleothem_cluster` pour défnir l'état du bloc de la spéléothèmes et blocs constituant la colonne de bloc de la spéléothème
+  - Ajout de la régle de surface `noise_gradient` qui remplace les blocs en fonction d'un bruit et d'une liste de dégradé
+  - Ajout du type d'élément de terrain `sequence` qui génére des éléments de terrain placé dans un ordre spécifique
+  - Ajout du type d'élément de terrain `template` qui place un modèle, choisi au hasard dans une liste pondérée
+  - Le champ `infiniburn` dans les type de dimension accepte un ID ou liste d'ID
+  - Les champs des élément de terrain configuré accepte un ID ou une liste d'ID :
+    - Les champs `cannot_replace` et `invalide_blocks` dans la section `blocks` des `minecraft:geode`
+    - Le champ `root_replaceable` des `minecraft:root_system`
+    - Les champs `replaceable` des `minecraft:vegetation_patch` et `minecraft:waterlogged_vegetation_patch`
+  - Le processeur de structure `minecraft:protected_blocks` accepte un ID ou une lliste d'ID
+  - Ajout des tags de blocs et d'objet : 
+    - `#suppresses_bounce` qui défni les blocs qui supprime le rebond des entités
+    - `#glazed_terracotta` qui défini les blocs ou objets de terre cuite
+    - `#concrete` qui défini les blocs ou objet de béton
+    - `#shears_extreme_breaking_speed` qui défni les blocs pouvent être détruit avec des cisailles à une vitesse 15
+    - `#shears_major_breaking_speed` qui défni les blocs pouvent être détruit avec des cisailles à une vitesse 5
+    - `#shears_minor_breaking_speed` qui défni les blocs pouvent être détruit avec des cisailles à une vitesse 2
+    - `#concrete_powders` qui défini la liste des objets de poudre de béton
+    - `#sulfur_cube_food` qui défini les objet qui peuvent nourrir un petit cube de soufre
+    - `#sulfur_cube_swallowable` qui défnit les objets qui peuvent être placer dans un cube de soufre
+    - `#sulfur_cube_archetype/regular`, `#sulfur_cube_archetype/bouncy`, `#sulfur_cube_archetype/slow_flat`, #sulfur_cube_archetype/fast_flat`, `#sulfur_cube_archetype/light`, #sulfur_cube_archetype/fast_sliding`, `#sulfur_cube_archetype/slow_sliding`, `#sulfur_cube_archetype/high_resistance` et `#sulfur_cube_archetype/sticky`qui définissent les objet qui définissent les diférentarchétype des cube de soufre
+  - Le tag de blocs `#concrete_powder` a été renommer en `#concrete_powders`
+  - Ajout du tag `minecraft:sulfur_cube` au tag d'entité `#non_controlling_rider`
+  - Ajout du tag d'entité `#minecraft:sulfur_cube_with_block_immune_to` qui défini tous les dégats ignoré par les cubes de soufre lorqu'ils ont un blocs
+  - Ajout des cube de soufre au tag d'entité `#not_scary_for_pufferfish`
+- RP version 85.0
+  - Ajout des sprites pour tous les nouveaux blocs et objets
+  - AJout des textures pour les cube de soufre
+  - Ajout de sons pour tous les blocs et cube de soufre
+  - Ajout de particules du cube de soufre lorsqu'il se déplace
+  - Les shaders `core/rendertype_text`, `core/rendertype_text_see_through`, `core/rendertype_text_intensity`, `core/rendertype_text_intensity_see_through`, `core/rendertype_text_background` et `core/rendertype_text_background_see_through` ont été remplacé par `core/text` et `core/text_background`
+  - Les variantes sont controllé par les définitions de shader `IS_GUI`, `IS_SEE_THROUGH` et `IS_GRAYSCALE`
+- [30 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2-snapshot-1)
