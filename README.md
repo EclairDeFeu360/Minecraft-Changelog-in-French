@@ -1,4 +1,5 @@
-![Un Piglin zombifié tient un champignon biscornu sur un bâton et chevauche un Strider dans la lave, avec une Forêt carmin en arrière-plan](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1.2/image.png)
-## [Minecraft 26.1.2](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-1-2)
-- DP version 101.1
-- RP version 84.0
+![Makena se dirige vers un puits de lave à bord d'un wagonnet dans les Badlands.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap2/image.png)
+## [Minecraft 26.2 Snapshot 2](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-2)
+- Amélioration de la vitesse de mise à jour des mondes de la 26.1 vers la 26.2
+- Le champ FPS affiche le type de mode de présentation
+- [4 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%202)
