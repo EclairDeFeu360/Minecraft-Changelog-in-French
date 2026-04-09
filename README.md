@@ -1,3 +1,4 @@
-![Des lapereaux jouent dans le désert près d'un cactus, sous le regard de leur mère qui les observe à proximité](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1.2-rc1/image.png)
-## [Minecraft 26.1.2 Release Candidate 1](https://www.minecraft.net/en-us/article/minecraft-26-1-2-release-candidate-1)
-- Des problèmes critiques ont été résolus
+![Un Piglin zombifié tient un champignon biscornu sur un bâton et chevauche un Strider dans la lave, avec une Forêt carmin en arrière-plan](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.1.2/image.png)
+## [Minecraft 26.1.2](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-1-2)
+- DP version 101.1
+- RP version 84.0
