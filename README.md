@@ -1,15 +1,22 @@
-![Sunny se trouve dans un puits de mine, tenant un seau contenant un cube de soufre, tandis qu'un cube de soufre l'observe par derrière.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap4/image.png)
-## [Minecraft 26.2 Snapshot 4](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-4)
-- Ajout des langues Ssisse française et tchouvache
-- Des blocs de granite et de tuf apparaissent dans les cavernes de soufres
-- La hauteur moyenne des pics de soufre a été réduite
-- Les hoglins, les piglins et les cubes de soufre apparaissent en difficulté paisible
-- Ajout d'entrées de télémétries pour envoyer des informations sur le moteur de rendu utilisé et les erreurs produites par le moteur Vulkan
-- DP version 103.0 :
-  - Ajout des attributs `miencraft:nameplate_distance` et `minecraft:below_name_distance`, qui contrôlent la distance d'affichage des noms des entités et des scores affichés en dessous
-  - Le sous-prédicat d'entités `minecraft:type_specific/slime` a été renommé en `minecraft:type_specific/cube_mob`
-- RP version 86.1 :
-  - La texture des cubes de soufre a été modifiée
-  - Ajout de sons quand un cube de soufre est mis dans un seau
-  - L'atlas des lits a été retiré
-- [15 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%204)
+![Noor pousse un cube de soufre imprégné de TNT vers un creeper dans le biome de cavernes de soufre. À l'arrière-plan, on aperçoit quelques spéléothèmes de soufre et deux ou trois cubes de soufre qui bondissent.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap5/image.png)
+## [Minecraft 26.2 Snapshot 5](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-5)
+- Ajout de l'archétype de cube de soufre `explosive`
+- Ajout des geysers
+- Modifications des hitboxes de plusieurs entités
+- Le mode écran tactile a été retiré
+- DP version 104.0 :
+  - Les arguments de couleur des équipes et des points de passage acceptent uniquement des noms de couleur en snake_case
+  - L'attribut `minecraft:nameplate_distance` a été renommé en `minecraft:name_tag_distance`
+  - Ajout du prédicat de bloc de type de génération du terrain `matching_biomes`, qui permet de détecter si le bloc et dans un ou plusieurs biomes
+  - Le champ `below_trunk_provider` de la configuration d'élément de terrain `tree` n'a plus de valeur par défaut
+  - Le champ `block` de la configuration d'élément de terrain `minecraft:multiface_growth` est obligatoire
+  - Ajout de la fonction de densité `minecraft:internal_select`, qui sélectionne plusieurs fonctions de densité basées sur une autre fonction de densité
+  - La fonction de densité `minecraft:weird_scaled_sampler` a été retiré
+  - Ajout des tags de bloc `#fox_immune_to`, `#polar_bear_immune_to`, `#snow_golem_immune_to`, `#stray_immune_to`, `#wither_immune_to`, `#wither_skeleton_immune_to`, et `#default_immune_to`, qui définissent les blocs dont les entités respectives sont immunisées
+  - Ajout de l'environnement de test `minecraft:difficulty`, qui définit la difficulté de l'environnement de test
+- RP version 86.2 :
+  - Ajout de sons pour les geysers et les spéléothèmes de soufre
+  - Ajout des particules de geysers
+- Protocole de Gestion des Serveurs version 3.0.0 :
+  - Le serveur de gestion démarre avant le serveur Minecraft
+- [18 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%205)
