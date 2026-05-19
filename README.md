@@ -1,23 +1,13 @@
-![Alex et Ari se tiennent sur une côte rocheuse, près d'un dispositif muni d'un distributeur qui a déversé de la lave sous un bloc de soufre concentré. Un geyser jaillit au-dessus du soufre concentré. Alex observe un bouton sur le distributeur, tandis qu'Ari regarde le geyser. Le soleil se lève au-dessus d'une forêt de bouleaux en arrière-plan.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap7/image.png)
-## [Minecraft 26.2 Snapshot 7](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-7)
-- Ajout d'un disque de musique
-- [Ajout du système d'ami](https://www.minecraft.net/en-us/article/friends-list-for-java-edition)
-- Il est possible de rejoindre le monde d'un ami sans serveur et en dehors du réseau local
-- L'archétype "Slow Bouncy" n'est plus flottant
-- Le panorama a été mis à jour
-- Les éruptions de geysers sont aléatoires sur un bloc de magma et permanentes sur un bloc de lave
-- Les geysers et gaz toxiques peuvent passer à travers les blocs non collidables
-- Ajout d'options en rapport avec le système d'ami
-- Ajout de télémetrie en rapport avec la connexion pair à pair
-- [Le Minecraft Live a été annoncé](https://www.minecraft.net/en-us/article/minecraft-live-twitchcon) :
-  - <t:1780158600:R> le <t:1780158600:F>
-  - [Le lien du trailer](<https://youtu.be/P1VnxWtE1yY>)
-- DP version 105.1 :
-  - Ajout des tags de bloc `#causes_periodic_geyser_éruptionss` et `#causes_continuous_geyser_éruptionss` qui définissent les blocs qui causent une éruption périodique ou continue des geysers
+![Steve et Sunny sautillent sur un lit blanc dans une maison d'un village des Plaines](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap8/image.png)
+## [Minecraft 26.2 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-8)
+- Le biome des cavernes de soufres peut se générer à la surface du monde
+- Les cubes de soufre sont immunisés aux blocs de magma
+- Le moteur de rendu par défaut est de nouveau OpenGL
+- Les lits sont légèrement plus rebondissants
+- DP version 106.0 :
+  - Ajout du type de dégât `minecraft:sulfur_cube_hot`
+  - La commande `publish` accepte un nouvel argument booléen pour définir si le serveur doit être ouvert en réseau pair à pair ou seulement en réseau local
+  - Ajout de la commande `unpublish` pour fermer le serveur au multijoueur
 - RP version 87.0 :
-  - Ajout de musiques
-  - Les panneaux utilisent des modèles de bloc au lieu de modèles d'entité de bloc
-  - Les chemins de textures et modèles des panneaux ont été modifiés
-  - Ajout des textures du nouveau disque de musique et des sprites d'option
-  - Ajout de sons pour les éruptions continues de geysers
-- [25 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%207)
+  - Ajout du sprite `friends/background_dark` 
+- [22 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%208)
