@@ -1,13 +1,14 @@
-![Steve et Sunny sautillent sur un lit blanc dans une maison d'un village des Plaines](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-snap8/image.png)
-## [Minecraft 26.2 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-2-snapshot-8)
-- Le biome des cavernes de soufres peut se générer à la surface du monde
-- Les cubes de soufre sont immunisés aux blocs de magma
-- Le moteur de rendu par défaut est de nouveau OpenGL
-- Les lits sont légèrement plus rebondissants
-- DP version 106.0 :
-  - Ajout du type de dégât `minecraft:sulfur_cube_hot`
-  - La commande `publish` accepte un nouvel argument booléen pour définir si le serveur doit être ouvert en réseau pair à pair ou seulement en réseau local
-  - Ajout de la commande `unpublish` pour fermer le serveur au multijoueur
-- RP version 87.0 :
-  - Ajout du sprite `friends/background_dark` 
-- [22 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Snapshot%208)
+![Noor veille sur un poulailler rempli de poules bruyants près d'une source sulfureuse.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.2-pre1/image.png)
+## [Minecraft 26.2 Pre-Release 1](https://www.minecraft.net/en-us/article/minecraft-26-2-pre-release-1)
+- Ajout de sons pour chaque archétype de cube de soufre
+- Mise à jour de la couleur du brouillard des cavernes de soufre
+- Réduction de la taille maximale des pointes de soufre
+- Ajout des propriétés de serveur `chat-spam-threshold-seconds` et `command-spam-threshold-seconds`, qui définissent le seuil auquel un joueur sera expulsé s'il envoie trop de messages ou de commandes
+- DP version 106.1 :
+  - Ajout du champ `sound_settings` dans les archétypes de cube de soufre pour définir les sons d'un cube de soufre
+  - Ajout d'un préréglage de monde `minecraft:flat_all_dimensions` qui crée un monde ou chaque dimension contient une couche de bedrock et une couche de matériaux de la dimension et un biome unique
+- RP version 88.0 :
+  - Le modèles et les textures des cubes de soufre ont été modifiés
+  - Mis à jour des sons d'une variante de poules
+  - Les sprites de pilliers de quartz et de purpur ont été renommés avec le suffixe `_side`
+- [32 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.2%20Pre-Release%201)
