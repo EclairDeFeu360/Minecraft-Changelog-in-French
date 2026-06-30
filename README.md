@@ -1,60 +1,35 @@
-![Kai se tient debout dans un camp abandonné, au cœur d'une forêt tachetée, un morceau de mouton cru à la main droite.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap1/image.png)
-## [Minecraft 26.3 Snapshot 1](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-1)
-- Ajout du biome de forêt tachetée :
-  - Des peupliers et des peupliers renversés s'y génèrent
-  - Des polypores se trouvent sur les peupliers et les peupliers tombés
-  - Des arbustes rouges s'y génèrent
-- Ajout des camps abandonnés
-- Ajout des escaliers et dalles de laine pour toutes les couleurs de laine
-- Les sapins n'ont plus de particules de feuilles tombantes
-- Les ragoûts suspects et les soupes de champignons peuvent être fabriqués avec deux champignons de n'importe quel type
-- DP version 108.0 :
-  - `/give`, `/unpublish` et `/tick` renvoient correctement les erreurs
-  - Les tessons de poterie sont personnalisables via un data pack
-  - Les entrées stockées dans le composant `minecraft:pot_decorations` et dans l'entité de bloc `minecraft:decorated_pot` sont des objets complets
-  - Le composant de texte `nbt` d'un message brut n'est plus résolu au-delà de 64 000 fois
-  - Le résultat de `/team join` et `/team leave` indique le nombre exact d'entités concernées
-  - Modification de la commande `/item` :
-    - Elle prend une source de slots en paramètre à la place des slots utilisés auparavant
-    - Les sources de slots peuvent être écrites dans la commande ou référencées
-    - Les notations textuelles de plages de slots restent acceptées
-    - L'argument `from entity` peut sélectionner plusieurs entités
-    - Les sous-commandes `fill` et `override` ont été ajoutées : s'il y a plus de slots de destination que d'objets, `fill` répète les objets sources et `override` vide les slots de destination restants
-  - Ajout de la sous-commande de condition `slots` dans `/execute if|unless`, qui compte les slots d'une source de slots présents sur un bloc ou une entité
-  - La sous-commande de condition `items` de `/execute if|unless` prend une source de slots au lieu d'un slot
-  - Les sources de slots peuvent être définies dans le dossier `slot_source` d'un data pack
-  - Ajout du type de source de slots `minecraft:reference` qui référence une source de slot
-  - La source de slot `minecraft:contents` n'est plus limitée aux slots non vides
-  - Le champ `source` de la source de slot `minecraft:slot_range` peut maintenant utiliser le type `container` qui prend les slots du conteneur ou de l'entité fournis via le contexte du butin, et devient optionnel
-  - Ajout du type de table de butin `minecraft:command_slot_source`, utilisé pour évaluer les sources de slots dans `/item` et `/execute`
-  - Ajout du composant de donnée `minecraft:provides_pottery_pattern`, qui décrit le motif de poterie stocké dans l'objet
-  - Modification du composant de donnée `minecraft:pot_decorations`, qui utilise maintenant les champs optionnels `back`, `left`, `right` et `front` contenant des objets
-  - Modification du composant de donnée `minecraft:trim_material` :
-    - Le champ `asset_name` a été remplacé par `palette` qui prend en paramètre un identifiant de texture
-    - Le champ `override_armor_assets` a été remplacé par des définitions dans un pack de ressources
-  - Modification du composant de donnée `instrument` :
-    - Ajout du champ optionnel `durability_damage` qui définit la quantité de durabilité à retirer de l'instrument joué
-    - `use_duration` peut maintenant être défini à `0`
-  - Le champ `sherds` de l'entité de bloc `minecraft:decorated_pot` utilise les champs optionnels `back`, `left`, `right` et `front` contenant des objets
-  - Les configurations d'éléments de terrain dans les data packs ont été déplacées vers `worldgen/feature`, avec une configuration directement dans l'objet racine
-  - Ajout du type d'élément de terrain `minecraft:end_podium` qui place la fontaine de l'End
-  - Ajout du décorateur d'arbre `shelf_mushroom`, du placeur de feuillage `poplar_foliage_placer` et du placeur de tronc `poplar_trunk_placer` pour les peupliers
-  - Le champ de configuration de bruit `surface_rule` a été renommé en `material_rule` et peut être défini dans un data pack dans le dossier `worldgen/material_rule`
-  - Le champ `condition` du type de règle de matériau a été renommé en `material_condition` et peut être défini dans un data pack dans le dossier `worldgen/material_condition`
-  - Ajout du placement de structure `minecraft:dimension_origin` qui fait apparaître une structure au point d'origine du monde
-  - Ajout des types de règles de test `minecraft:height_match` et `minecraft:all_of` qui appliquent une condition à la hauteur du bloc ou vérifient que d'autres types de règles de test sont valides
-  - Ajout de tags de blocs et d'objets pour les bûches de peuplier, les escaliers et dalles de laine, les champignons, les minerais et plusieurs comportements de mouvement ou de fluides
-  - Ajout de tags de biomes pour chaque variante de camp abandonné
-  - Ajout des tags d'entités `#cannot_be_dismounted_by_item_usage` et `#no_wolf_retaliation`, qui définissent les entités dont on ne peut pas descendre en utilisant un objet et tous les types de dégâts qui ne doivent pas rendre les loups apprivoisés agressifs envers la source des dégâts
-  - Ajout des particules `minecraft:red_poplar_leaves`, `minecraft:orange_poplar_leaves` et `minecraft:yellow_poplar_leaves` pour les feuilles tombantes de peupliers
-- RP version 89.0 :
-  - Les palettes d'ornement d'armure ont été déplacées de `textures/trim/color_palettes/` vers `textures/palettes/trim/`
-  - La palette de base des ornements d'armure a été déplacée vers `textures/palettes/trim_base.png`
-  - Les textures d'ornement d'armure des entités sont générées à la demande, avec un champ `palette` dans le fichier `.mcmeta`
-  - Les sources de sprites `paletted_permutations` utilisent des identifiants de palette au lieu d'emplacements de textures
-  - Ajout du champ optionnel `trim_palette_replacements` dans les ressources d'équipement qui remplace `override_armor_assets`
-  - Ajout des textures, modèles, particules et sons des nouveaux blocs
-- Protocole de Gestion des Serveurs version 3.1.0 :
-  - Certaines lignes de logs surveillées par les logiciels serveur ont été retirées, le Protocole de Gestion des Serveurs devant être utilisé à la place
-  - Ajout des notifications `minecraft:notification/world/upgrade_started`, `minecraft:notification/world/upgrade_progress`, `minecraft:notification/world/upgrade_finished` et `minecraft:notification/world/upgrade_failed`, qui indiquent lorsque le serveur réalise une mise à jour complète du monde au démarrage
-- [41 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%201)
+![Efe tient une houe dans la main droite et un bouclier dans la main gauche, près d'un camp abandonné au cœur d'une forêt tachetée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap2/image.png)
+## [Minecraft 26.3 Snapshot 2](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-2)
+- Les comportements de déplacement et de nage aléatoires des créatures persistantes se désactivent lorsqu'aucun joueur n'est à proximité
+- L'option "Transparence améliorée" utilise désormais un algorithme de transparence indépendant de l'ordre
+- Lorsqu'un bouclier est utilisé avec une houe ou une pelle, le lever du bouclier est prioritaire sur le labourage et la création de chemins
+- Les noyés équipés d'un trident utilisent une attaque de mêlée lorsque le joueur se trouve à moins de 3 blocs
+- La liste blanche est active par défaut
+- DP version 109.0 :
+  - Ajout du composant de donnée `minecraft:block_transformer`, qui permet à un objet de transformer un bloc lors d'une interaction
+  - Ajout de la table de butin `till/rooted_dirt` utilisée lorsque de la terre racineuse est labourée avec une houe
+  - L'air de caverne ne se génère plus dans les cavernes du Nether
+  - Ajout du fournisseur d'état de bloc `minecraft:copy_properties_provider`, qui copie les propriétés communes entre un bloc source et un bloc cible
+  - Modification de plusieurs types d'éléments de terrain :
+    - `minecraft:stepped_column_cluster`, `minecraft:single_block_pillar` et `minecraft:random_neighbor_spread` remplacent respectivement `minecraft:basalt_columns`, `minecraft:basalt_pillar` et `minecraft:glowstone_blob`, avec davantage d'options de configuration
+    - Ajout de `minecraft:overlay`, qui place plusieurs éléments de terrain au même emplacement
+    - Ajout de `minecraft:projected_random_patchy_square`, qui génère un carré irrégulier pouvant être projeté vers le bas
+  - Le modificateur de placement `minecraft:random_offset` a été renommé en `minecraft:offset` et utilise les champs `x`, `y` et `z` à la place de `xz_spread` et `y_spread`
+  - Le champ `spawn_target` des paramétres de bruit peut maintenant utiliser n'importe quelle fonction de densité et définit ses cibles sous forme d'hypercubes
+  - Ajout du prédicat de bloc `minecraft:height_range`, qui vérifie qu'une position se trouve dans une plage de hauteur
+  - Ajout de l'ancre verticale `relative_to_sea_level`, qui définit un décalage par rapport au niveau de la mer de la dimension
+  - Le registre `worldgen/configured_carver` a été renommé en `worldgen/carver`
+  - Modification des types de sculpteurs `minecraft:cave` et `minecraft:canyon` :
+    - Les champs de `config` ont été déplacés à la racine et plusieurs champs ont été ajoutés, renommés ou supprimés
+    - Suppression de `minecraft:nether_cave`, remplacé par `minecraft:cave`
+  - Ajout du type de fournisseur d'entier `minecraft:very_biased_to_bottom`, qui choisit une valeur aléatoire avec une préférence quadratique pour la valeur minimale
+  - Ajout des tags de blocs `#turns_into_dirt_path`, qui définit les blocs pouvant être transformés en chemin, et d'objets `#dowses_campfires`, qui définit les objets pouvant éteindre un feu de camp
+  - Suppression des tags de blocs `#overworld_carver_replaceables` et `#nether_carver_replaceables`
+- RP version 90.0 :
+  - Modification de la texture du polypore
+  - Ajout de la texture de particule `shelf_mushroom_particle.png`
+  - Ajout et modification de shaders pour prendre en charge la transparence indépendante de l'ordre
+  - Renommage des shaders principaux des nuages et de la bordure du monde
+  - La logique d'échantillonnage des textures de `core/terrain.fsh` a été déplacée vers `include/texture_sampling.glsl`
+  - Suppression de l'ancienne chaîne de post-traitement de la transparence
+- [51 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%202)
