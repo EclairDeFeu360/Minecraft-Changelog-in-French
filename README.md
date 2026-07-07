@@ -1,35 +1,33 @@
-![Efe tient une houe dans la main droite et un bouclier dans la main gauche, près d'un camp abandonné au cœur d'une forêt tachetée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap2/image.png)
-## [Minecraft 26.3 Snapshot 2](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-2)
-- Les comportements de déplacement et de nage aléatoires des créatures persistantes se désactivent lorsqu'aucun joueur n'est à proximité
-- L'option "Transparence améliorée" utilise désormais un algorithme de transparence indépendant de l'ordre
-- Lorsqu'un bouclier est utilisé avec une houe ou une pelle, le lever du bouclier est prioritaire sur le labourage et la création de chemins
-- Les noyés équipés d'un trident utilisent une attaque de mêlée lorsque le joueur se trouve à moins de 3 blocs
-- La liste blanche est active par défaut
-- DP version 109.0 :
-  - Ajout du composant de donnée `minecraft:block_transformer`, qui permet à un objet de transformer un bloc lors d'une interaction
-  - Ajout de la table de butin `till/rooted_dirt` utilisée lorsque de la terre racineuse est labourée avec une houe
-  - L'air de caverne ne se génère plus dans les cavernes du Nether
-  - Ajout du fournisseur d'état de bloc `minecraft:copy_properties_provider`, qui copie les propriétés communes entre un bloc source et un bloc cible
-  - Modification de plusieurs types d'éléments de terrain :
-    - `minecraft:stepped_column_cluster`, `minecraft:single_block_pillar` et `minecraft:random_neighbor_spread` remplacent respectivement `minecraft:basalt_columns`, `minecraft:basalt_pillar` et `minecraft:glowstone_blob`, avec davantage d'options de configuration
-    - Ajout de `minecraft:overlay`, qui place plusieurs éléments de terrain au même emplacement
-    - Ajout de `minecraft:projected_random_patchy_square`, qui génère un carré irrégulier pouvant être projeté vers le bas
-  - Le modificateur de placement `minecraft:random_offset` a été renommé en `minecraft:offset` et utilise les champs `x`, `y` et `z` à la place de `xz_spread` et `y_spread`
-  - Le champ `spawn_target` des paramétres de bruit peut maintenant utiliser n'importe quelle fonction de densité et définit ses cibles sous forme d'hypercubes
-  - Ajout du prédicat de bloc `minecraft:height_range`, qui vérifie qu'une position se trouve dans une plage de hauteur
-  - Ajout de l'ancre verticale `relative_to_sea_level`, qui définit un décalage par rapport au niveau de la mer de la dimension
-  - Le registre `worldgen/configured_carver` a été renommé en `worldgen/carver`
-  - Modification des types de sculpteurs `minecraft:cave` et `minecraft:canyon` :
-    - Les champs de `config` ont été déplacés à la racine et plusieurs champs ont été ajoutés, renommés ou supprimés
-    - Suppression de `minecraft:nether_cave`, remplacé par `minecraft:cave`
-  - Ajout du type de fournisseur d'entier `minecraft:very_biased_to_bottom`, qui choisit une valeur aléatoire avec une préférence quadratique pour la valeur minimale
-  - Ajout des tags de blocs `#turns_into_dirt_path`, qui définit les blocs pouvant être transformés en chemin, et d'objets `#dowses_campfires`, qui définit les objets pouvant éteindre un feu de camp
-  - Suppression des tags de blocs `#overworld_carver_replaceables` et `#nether_carver_replaceables`
-- RP version 90.0 :
-  - Modification de la texture du polypore
-  - Ajout de la texture de particule `shelf_mushroom_particle.png`
-  - Ajout et modification de shaders pour prendre en charge la transparence indépendante de l'ordre
-  - Renommage des shaders principaux des nuages et de la bordure du monde
-  - La logique d'échantillonnage des textures de `core/terrain.fsh` a été déplacée vers `include/texture_sampling.glsl`
-  - Suppression de l'ancienne chaîne de post-traitement de la transparence
-- [51 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%202)
+![Alex est assis sur un coussin bleu dans une cabane de sorcière, à côté d'un lit de paille et d'un alambic. Alex tient une potion brune, et une sorcière les observe depuis l'extérieur, visiblement désireuse de se joindre à la fête sur le coussin rouge, actuellement inoccupé.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap3/image.png)
+## [Minecraft 26.3 Snapshot 3](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-3)
+- Ajout du coussin
+- Ajout du lit de paille 
+- Ajout du support de la langue gothique
+- DP version 110.0 :
+  - Ajout de la commande `/posteffect`, qui permet d'ajouter, lister, retirer ou effacer les effets de post-traitement appliqués à l'écran des joueurs
+  - La sous-commande `feature` de `/place` accepte maintenant la définition directe d'un élément de terrain
+  - Modification de l'attribut d'environnement `minecraft:gameplay/bed_rule`, avec `explodes` renommé en `destroy_on_use` et l'ajout de `destroy_on_leave`
+  - Ajout de l'attribut d'environnement `minecraft:gameplay/straw_bed_rule`, qui définit les règles de sommeil et de destruction propres au lit de paille
+  - Mise à jour du composant de donnée `minecraft:block_transformer`, qui peut contrôler les mises à jour du bloc transformé depuis ses voisins
+  - Ajout du composant de donnée `minecraft:compostable`, qui définit comment un objet ajoute des couches au composteur
+  - Ajout des prédicats `minecraft:tool/can_silk_touch` et `minecraft:tool/can_shear`, qui vérifient respectivement si un outil possède Toucher de soie ou correspond à des cisailles
+  - Le prédicat de composant `minecraft:potion_contents` peut maintenant cibler des effets de potion précis
+  - Ajout du registre `minecraft:number_provider`, qui regroupe les fournisseurs de nombres utilisables par les données
+  - Ajout de fournisseurs de nombres pour le composteur, qui déterminent combien de couches sont ajoutées selon l'objet et l'état du composteur
+  - Ajout des types de fournisseurs de nombres `minecraft:number_dispatcher`, `minecraft:conditional_value` et `minecraft:weighted_list`, qui renvoient respectivement une valeur selon une condition, un choix conditionnel ou une distribution pondérée
+  - Les recettes d'alchimie sont maintenant customisable via data pack avec le type `minecraft:brewing`
+  - Suppression des types d'éléments de terrain `minecraft:coral_mushroom`, `minecraft:kelp`, `minecraft:seagrass` et `minecraft:sea_pickle`
+  - Les types `minecraft:coral_claw` et `minecraft:coral_tree` utilisent un champ `feature` pour placer les blocs souhaités
+  - Ajout des modificateurs de placement `minecraft:cuboid`, qui répète un élément de terrain dans un cuboïde, et `minecraft:random_chance`, qui conditionne son placement à une probabilité
+  - Modification de plusieurs fournisseurs d'état de bloc : `minecraft:copy_properties_provider` utilise le champ `source`, ajout de `minecraft:random_block_provider`, qui choisit aléatoirement l'état par défaut d'un bloc, et `minecraft:rotated_block_provider` fonctionne avec tout bloc ayant les propriétés `axis` ou `facing`
+  - Ajout des tests de règle `minecraft:any_of` et `minecraft:not`, qui vérifient respectivement si au moins une règle réussit ou si une règle échoue
+  - Ajout des tags de blocs `#sculk_growth_inhibitors`, `#cats_can_sit_on`, `#cats_can_lie_on` et `#speeds_up_zombie_villager_curing`, pour les inhibiteurs de sculk, les blocs utilisés par les chats et la guérison des zombies-villageois
+  - Ajout des tags de blocs `#villagers_can_sleep_on_bed`, `#villager_babies_can_jump_on_bed` et `#height_specific_ore_replaceables`, pour les interactions des villageois avec les lits et le remplacement des minerais selon la hauteur
+  - Le tag d'objets `#dowses_campfires` a été renommé en `#douses_campfires`
+  - Ajout du tag de structures `#abandoned_camp`, qui regroupe toutes les variantes de camps abandonnés
+- RP version 91.0 :
+  - Ajout des textures `block/straw_bed.png` et `block/straw_bed_particle.png` pour le lit de paille
+  - Ajout de sons pour le lit de paille, les feuilles de peuplier, l'arbuste rouge et le coussin
+  - Modification des éléments de modèles de blocs : ajout de `shade_direction_override`, qui remplace l'ombrage directionnel d'un élément, et suppression de `shade`
+  - Les packs de ressources peuvent définir un effet de post-traitement `minecraft:end_of_frame`, toujours appliqué tant que le pack est chargé
+- [61 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%203)
