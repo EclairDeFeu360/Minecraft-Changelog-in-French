@@ -1,33 +1,47 @@
-![Alex est assis sur un coussin bleu dans une cabane de sorcière, à côté d'un lit de paille et d'un alambic. Alex tient une potion brune, et une sorcière les observe depuis l'extérieur, visiblement désireuse de se joindre à la fête sur le coussin rouge, actuellement inoccupé.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap3/image.png)
-## [Minecraft 26.3 Snapshot 3](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-3)
-- Ajout du coussin
-- Ajout du lit de paille 
-- Ajout du support de la langue gothique
-- DP version 110.0 :
-  - Ajout de la commande `/posteffect`, qui permet d'ajouter, lister, retirer ou effacer les effets de post-traitement appliqués à l'écran des joueurs
-  - La sous-commande `feature` de `/place` accepte maintenant la définition directe d'un élément de terrain
-  - Modification de l'attribut d'environnement `minecraft:gameplay/bed_rule`, avec `explodes` renommé en `destroy_on_use` et l'ajout de `destroy_on_leave`
-  - Ajout de l'attribut d'environnement `minecraft:gameplay/straw_bed_rule`, qui définit les règles de sommeil et de destruction propres au lit de paille
-  - Mise à jour du composant de donnée `minecraft:block_transformer`, qui peut contrôler les mises à jour du bloc transformé depuis ses voisins
-  - Ajout du composant de donnée `minecraft:compostable`, qui définit comment un objet ajoute des couches au composteur
-  - Ajout des prédicats `minecraft:tool/can_silk_touch` et `minecraft:tool/can_shear`, qui vérifient respectivement si un outil possède Toucher de soie ou correspond à des cisailles
-  - Le prédicat de composant `minecraft:potion_contents` peut maintenant cibler des effets de potion précis
-  - Ajout du registre `minecraft:number_provider`, qui regroupe les fournisseurs de nombres utilisables par les données
-  - Ajout de fournisseurs de nombres pour le composteur, qui déterminent combien de couches sont ajoutées selon l'objet et l'état du composteur
-  - Ajout des types de fournisseurs de nombres `minecraft:number_dispatcher`, `minecraft:conditional_value` et `minecraft:weighted_list`, qui renvoient respectivement une valeur selon une condition, un choix conditionnel ou une distribution pondérée
-  - Les recettes d'alchimie sont maintenant customisable via data pack avec le type `minecraft:brewing`
-  - Suppression des types d'éléments de terrain `minecraft:coral_mushroom`, `minecraft:kelp`, `minecraft:seagrass` et `minecraft:sea_pickle`
-  - Les types `minecraft:coral_claw` et `minecraft:coral_tree` utilisent un champ `feature` pour placer les blocs souhaités
-  - Ajout des modificateurs de placement `minecraft:cuboid`, qui répète un élément de terrain dans un cuboïde, et `minecraft:random_chance`, qui conditionne son placement à une probabilité
-  - Modification de plusieurs fournisseurs d'état de bloc : `minecraft:copy_properties_provider` utilise le champ `source`, ajout de `minecraft:random_block_provider`, qui choisit aléatoirement l'état par défaut d'un bloc, et `minecraft:rotated_block_provider` fonctionne avec tout bloc ayant les propriétés `axis` ou `facing`
-  - Ajout des tests de règle `minecraft:any_of` et `minecraft:not`, qui vérifient respectivement si au moins une règle réussit ou si une règle échoue
-  - Ajout des tags de blocs `#sculk_growth_inhibitors`, `#cats_can_sit_on`, `#cats_can_lie_on` et `#speeds_up_zombie_villager_curing`, pour les inhibiteurs de sculk, les blocs utilisés par les chats et la guérison des zombies-villageois
-  - Ajout des tags de blocs `#villagers_can_sleep_on_bed`, `#villager_babies_can_jump_on_bed` et `#height_specific_ore_replaceables`, pour les interactions des villageois avec les lits et le remplacement des minerais selon la hauteur
-  - Le tag d'objets `#dowses_campfires` a été renommé en `#douses_campfires`
-  - Ajout du tag de structures `#abandoned_camp`, qui regroupe toutes les variantes de camps abandonnés
-- RP version 91.0 :
-  - Ajout des textures `block/straw_bed.png` et `block/straw_bed_particle.png` pour le lit de paille
-  - Ajout de sons pour le lit de paille, les feuilles de peuplier, l'arbuste rouge et le coussin
-  - Modification des éléments de modèles de blocs : ajout de `shade_direction_override`, qui remplace l'ombrage directionnel d'un élément, et suppression de `shade`
-  - Les packs de ressources peuvent définir un effet de post-traitement `minecraft:end_of_frame`, toujours appliqué tant que le pack est chargé
-- [61 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%203)
+![Noor tient une vitre teintée noire dans la main gauche, sur une bûche de peuplier dans une forêt tachetée, en attendant qu'un fumoir cuise de la nourriture.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap4/image.png)
+## [Minecraft 26.3 Snapshot 4](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4)
+- Les joueurs en mode Spectateur peuvent maintenant utiliser les portails pour se téléporter
+- Les tatous ne tentent plus de se mettre en boule lorsqu'ils sont immergés dans un liquide
+- Suppression de l'option d'entrée brute de la souris, celle-ci utilisant désormais toujours le mode relatif en jeu
+- Les raccourcis clavier utilisent maintenant la position physique des touches plutôt que des codes propres à la disposition du clavier
+- Le plein écran sans bordure est maintenant utilisé par défaut et il est possible de basculer vers le plein écran exclusif sans redémarrer le jeu
+- Le plein écran exclusif n'est plus pris en charge sur macOS et, sur Linux, le jeu privilégie désormais Wayland lorsqu'il est disponible
+- L'écran de débogage peut utiliser une échelle d'interface distincte et affiche maintenant la vitesse du joueur ainsi que la fréquence de rafraîchissement de l'écran
+- Réorganisation des minerais dans l'inventaire du mode Créatif et de l'onglet Blocs naturels selon l'ordre Overworld, Nether puis End
+- Minecraft utilise désormais SDL3 à la place de GLFW pour la gestion des fenêtres, des entrées et l'intégration à la plateforme
+- DP version 111.0 :
+  - Les types utilisés par les tables de butin et disposant d'un registre acceptent maintenant des références vers des éléments et des tags enregistrés ; les anciens types de référence des prédicats, modificateurs d'objets et sources de slots ont été supprimés
+  - Les panneaux n'exécutent plus automatiquement les commandes et événements de clic contenus dans leur texte
+  - La commande `/spreadplayers` utilise maintenant le tag de blocs `#entities_can_teleport_to` pour déterminer les blocs sur lesquels une entité peut être téléportée
+  - Ajout des attributs d'environnement `minecraft:gameplay/natural_mob_spawns`, qui définit l'apparition naturelle des créatures, et `minecraft:gameplay/creature_world_gen_spawn_probability`, qui règle leur probabilité d'apparition pendant la génération du monde
+  - L'attribut d'environnement `minecraft:visual/ambient_particles` peut maintenant interpoler les probabilités entre les étapes d'une chronologie et ajouter des particules à celles des couches précédentes
+  - Ajout des composants de donnée `minecraft:cooking_fuel` et `minecraft:brewing_fuel`, qui définissent respectivement les combustibles, leur durée ou nombre d'utilisations et leur vitesse pour les blocs de cuisson et l'alambic
+  - Ajout des composants de donnée `minecraft:sign_text_front` et `minecraft:sign_text_back`, qui stockent le texte affiché sur chaque face d'un panneau, et de `minecraft:waxed`, qui marque son contenu comme ciré
+  - Ajout du composant de donnée `minecraft:cushion/color`, qui définit la couleur d'un coussin lorsqu'il est placé
+  - Ajout du composant de donnée `minecraft:villager_food`, qui définit les objets que les villageois peuvent manger et leur valeur nutritive
+  - Ajout du composant de donnée `minecraft:mob_visibility`, qui modifie la distance à laquelle certaines créatures détectent une entité portant l'objet
+  - Les entités de bloc `minecraft:sign` et `minecraft:hanging_sign` utilisent les nouveaux composants de texte et de cirage ; ajout du champ `allow_op_features`, qui permet de réactiver les commandes au clic
+  - De nombreux champs de déclencheurs de progrès peuvent maintenant référencer un prédicat enregistré et les listes implicites de conditions ne sont plus acceptées
+  - Les sources de slots, prédicats, modificateurs d'objets et fournisseurs de nombres peuvent désormais être référencés directement dans les champs correspondants des tables de butin
+  - Ajout du type de table de butin `minecraft:container_process`, qui évalue les valeurs des combustibles de cuisson et d'alchimie selon le conteneur concerné
+  - Dans les entrées de tables de butin, les champs `conditions` et `functions` ont été renommés en `condition` et `modifier` et peuvent référencer des prédicats ou modificateurs enregistrés
+  - Le champ `condition` des prédicats a été renommé en `type`
+  - Ajout du prédicat `minecraft:match_block`, qui vérifie l'état, les données et les composants d'un bloc, en remplacement de `minecraft:block_state_property`
+  - Ajout de fournisseurs de nombres `minecraft:cooking/*` et `minecraft:brewing/*`, qui définissent les durées et vitesses de cuisson ainsi que la vitesse et le nombre d'utilisations des combustibles d'alchimie
+  - Les recettes du fumoir et du haut fourneau utilisent maintenant le même temps de cuisson que celles du fourneau, leur accélération étant définie par `minecraft:cooking/speed_default`
+  - Les paramètres d'apparition des créatures ont été retirés des biomes et déplacés vers les nouveaux attributs d'environnement
+  - Suppression des types d'éléments de terrain `minecraft:nether_forest_vegetation`, `minecraft:twisting_vines` et `minecraft:weeping_vines`
+  - Dans les paramètres de bruit, `aquifers_enabled` et `ore_veins_enabled` ont été remplacés par les objets optionnels `aquifers` et `ore_veins`, qui configurent respectivement les aquifères et les filons de minerai
+  - Ajout des fonctions de densité `minecraft:sub` et `minecraft:div`, qui effectuent une soustraction et une division, et de `minecraft:negate`, qui inverse le signe d'une valeur
+  - Ajout de la fonction de densité `minecraft:lerp`, qui effectue une interpolation linéaire entre deux valeurs
+  - Ajout des fonctions de densité `minecraft:floor`, `minecraft:round`, `minecraft:ceil` et `minecraft:truncate`, qui arrondissent une valeur dans différentes directions
+  - Ajout de la fonction de densité `minecraft:beardifier`, qui produit la densité utilisée pour intégrer les structures au terrain
+  - La fonction de densité `minecraft:invert` a été renommée en `minecraft:reciprocal`
+  - Le champ `given_item_modifiers` des échanges de villageois a été renommé en `given_item_modifier`
+  - Ajout du tag de blocs `#cushion_uses_collision_shape`, qui définit les blocs dont la forme de collision est utilisée pour placer un coussin
+  - Suppression du tag d'objets `#brewing_fuel`, remplacé par le composant `minecraft:brewing_fuel`
+- RP version 92.0 :
+  - Ajout du shader `core/oit_depth_bounds_cull.fsh`, qui prend en charge la limitation de profondeur de la transparence indépendante de l'ordre
+  - Ajout de la définition `OIT_ALWAYS_WRITE_DEPTH`, qui force l'écriture de la profondeur pendant cette étape du rendu
+  - Ajout du shader `core/integrate_depth.fsh`, qui intègre les tampons de profondeur de l'interface 3D et des repères toujours visibles au tampon principal
+- [75 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%204)
