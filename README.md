@@ -1,47 +1,12 @@
-![Noor tient une vitre teintée noire dans la main gauche, sur une bûche de peuplier dans une forêt tachetée, en attendant qu'un fumoir cuise de la nourriture.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap4/image.png)
-## [Minecraft 26.3 Snapshot 4](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4)
-- Les joueurs en mode Spectateur peuvent maintenant utiliser les portails pour se téléporter
-- Les tatous ne tentent plus de se mettre en boule lorsqu'ils sont immergés dans un liquide
-- Suppression de l'option d'entrée brute de la souris, celle-ci utilisant désormais toujours le mode relatif en jeu
-- Les raccourcis clavier utilisent maintenant la position physique des touches plutôt que des codes propres à la disposition du clavier
-- Le plein écran sans bordure est maintenant utilisé par défaut et il est possible de basculer vers le plein écran exclusif sans redémarrer le jeu
-- Le plein écran exclusif n'est plus pris en charge sur macOS et, sur Linux, le jeu privilégie désormais Wayland lorsqu'il est disponible
-- L'écran de débogage peut utiliser une échelle d'interface distincte et affiche maintenant la vitesse du joueur ainsi que la fréquence de rafraîchissement de l'écran
-- Réorganisation des minerais dans l'inventaire du mode Créatif et de l'onglet Blocs naturels selon l'ordre Overworld, Nether puis End
-- Minecraft utilise désormais SDL3 à la place de GLFW pour la gestion des fenêtres, des entrées et l'intégration à la plateforme
-- DP version 111.0 :
-  - Les types utilisés par les tables de butin et disposant d'un registre acceptent maintenant des références vers des éléments et des tags enregistrés ; les anciens types de référence des prédicats, modificateurs d'objets et sources de slots ont été supprimés
-  - Les panneaux n'exécutent plus automatiquement les commandes et événements de clic contenus dans leur texte
-  - La commande `/spreadplayers` utilise maintenant le tag de blocs `#entities_can_teleport_to` pour déterminer les blocs sur lesquels une entité peut être téléportée
-  - Ajout des attributs d'environnement `minecraft:gameplay/natural_mob_spawns`, qui définit l'apparition naturelle des créatures, et `minecraft:gameplay/creature_world_gen_spawn_probability`, qui règle leur probabilité d'apparition pendant la génération du monde
-  - L'attribut d'environnement `minecraft:visual/ambient_particles` peut maintenant interpoler les probabilités entre les étapes d'une chronologie et ajouter des particules à celles des couches précédentes
-  - Ajout des composants de donnée `minecraft:cooking_fuel` et `minecraft:brewing_fuel`, qui définissent respectivement les combustibles, leur durée ou nombre d'utilisations et leur vitesse pour les blocs de cuisson et l'alambic
-  - Ajout des composants de donnée `minecraft:sign_text_front` et `minecraft:sign_text_back`, qui stockent le texte affiché sur chaque face d'un panneau, et de `minecraft:waxed`, qui marque son contenu comme ciré
-  - Ajout du composant de donnée `minecraft:cushion/color`, qui définit la couleur d'un coussin lorsqu'il est placé
-  - Ajout du composant de donnée `minecraft:villager_food`, qui définit les objets que les villageois peuvent manger et leur valeur nutritive
-  - Ajout du composant de donnée `minecraft:mob_visibility`, qui modifie la distance à laquelle certaines créatures détectent une entité portant l'objet
-  - Les entités de bloc `minecraft:sign` et `minecraft:hanging_sign` utilisent les nouveaux composants de texte et de cirage ; ajout du champ `allow_op_features`, qui permet de réactiver les commandes au clic
-  - De nombreux champs de déclencheurs de progrès peuvent maintenant référencer un prédicat enregistré et les listes implicites de conditions ne sont plus acceptées
-  - Les sources de slots, prédicats, modificateurs d'objets et fournisseurs de nombres peuvent désormais être référencés directement dans les champs correspondants des tables de butin
-  - Ajout du type de table de butin `minecraft:container_process`, qui évalue les valeurs des combustibles de cuisson et d'alchimie selon le conteneur concerné
-  - Dans les entrées de tables de butin, les champs `conditions` et `functions` ont été renommés en `condition` et `modifier` et peuvent référencer des prédicats ou modificateurs enregistrés
-  - Le champ `condition` des prédicats a été renommé en `type`
-  - Ajout du prédicat `minecraft:match_block`, qui vérifie l'état, les données et les composants d'un bloc, en remplacement de `minecraft:block_state_property`
-  - Ajout de fournisseurs de nombres `minecraft:cooking/*` et `minecraft:brewing/*`, qui définissent les durées et vitesses de cuisson ainsi que la vitesse et le nombre d'utilisations des combustibles d'alchimie
-  - Les recettes du fumoir et du haut fourneau utilisent maintenant le même temps de cuisson que celles du fourneau, leur accélération étant définie par `minecraft:cooking/speed_default`
-  - Les paramètres d'apparition des créatures ont été retirés des biomes et déplacés vers les nouveaux attributs d'environnement
-  - Suppression des types d'éléments de terrain `minecraft:nether_forest_vegetation`, `minecraft:twisting_vines` et `minecraft:weeping_vines`
-  - Dans les paramètres de bruit, `aquifers_enabled` et `ore_veins_enabled` ont été remplacés par les objets optionnels `aquifers` et `ore_veins`, qui configurent respectivement les aquifères et les filons de minerai
-  - Ajout des fonctions de densité `minecraft:sub` et `minecraft:div`, qui effectuent une soustraction et une division, et de `minecraft:negate`, qui inverse le signe d'une valeur
-  - Ajout de la fonction de densité `minecraft:lerp`, qui effectue une interpolation linéaire entre deux valeurs
-  - Ajout des fonctions de densité `minecraft:floor`, `minecraft:round`, `minecraft:ceil` et `minecraft:truncate`, qui arrondissent une valeur dans différentes directions
-  - Ajout de la fonction de densité `minecraft:beardifier`, qui produit la densité utilisée pour intégrer les structures au terrain
-  - La fonction de densité `minecraft:invert` a été renommée en `minecraft:reciprocal`
-  - Le champ `given_item_modifiers` des échanges de villageois a été renommé en `given_item_modifier`
-  - Ajout du tag de blocs `#cushion_uses_collision_shape`, qui définit les blocs dont la forme de collision est utilisée pour placer un coussin
-  - Suppression du tag d'objets `#brewing_fuel`, remplacé par le composant `minecraft:brewing_fuel`
-- RP version 92.0 :
-  - Ajout du shader `core/oit_depth_bounds_cull.fsh`, qui prend en charge la limitation de profondeur de la transparence indépendante de l'ordre
-  - Ajout de la définition `OIT_ALWAYS_WRITE_DEPTH`, qui force l'écriture de la profondeur pendant cette étape du rendu
-  - Ajout du shader `core/integrate_depth.fsh`, qui intègre les tampons de profondeur de l'interface 3D et des repères toujours visibles au tampon principal
-- [75 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%204)
+![Un mouton noir, dans une forêt tachetée, contemple l'horizon.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap5/image.png)
+## [Minecraft 26.3 Snapshot 5](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-5)
+- DP version 112.0 :
+  - Les listes d'éléments et les tags peuvent maintenant mélanger les valeurs directes et les références
+  - Suppression des champs `extra_rare_growths` et `catalyst_chance` du type d'élément de terrain `minecraft:sculk_patch`
+- RP version 93.0 :
+  - La définition `B3D_IS_ZERO_TO_ONE` a été renommée en `RENDERPEARL_IS_ZERO_TO_ONE`
+  - Les shaders OpenGL sont maintenant compilés par ShaderC, comme ceux utilisant Vulkan
+  - Les inclusions de shaders utilisent maintenant `#include` à la place de `#moj_import`
+  - Les entrées et sorties de shaders doivent maintenant préciser leur emplacement, utilisé pour faire correspondre les sorties de vertex aux entrées de fragment
+  - Ajout de la définition `RENDERPEARL_INSTANCE_INDEX_INCLUDES_BASE_INSTANCE`, qui indique si `gl_InstanceIndex` inclut l'instance de base selon le fonctionnement de Vulkan ou d'OpenGL
+- [22 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%205)
