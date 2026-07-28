@@ -1,12 +1,28 @@
-![Un mouton noir, dans une forêt tachetée, contemple l'horizon.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap5/image.png)
-## [Minecraft 26.3 Snapshot 5](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-5)
-- DP version 112.0 :
-  - Les listes d'éléments et les tags peuvent maintenant mélanger les valeurs directes et les références
-  - Suppression des champs `extra_rare_growths` et `catalyst_chance` du type d'élément de terrain `minecraft:sculk_patch`
-- RP version 93.0 :
-  - La définition `B3D_IS_ZERO_TO_ONE` a été renommée en `RENDERPEARL_IS_ZERO_TO_ONE`
-  - Les shaders OpenGL sont maintenant compilés par ShaderC, comme ceux utilisant Vulkan
-  - Les inclusions de shaders utilisent maintenant `#include` à la place de `#moj_import`
-  - Les entrées et sorties de shaders doivent maintenant préciser leur emplacement, utilisé pour faire correspondre les sorties de vertex aux entrées de fragment
-  - Ajout de la définition `RENDERPEARL_INSTANCE_INDEX_INCLUDES_BASE_INSTANCE`, qui indique si `gl_InstanceIndex` inclut l'instance de base selon le fonctionnement de Vulkan ou d'OpenGL
-- [22 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%205)
+![Un camp abandonné dans un bosquet de cerisiers avec un petit point d'eau au premier plan et un coucher de soleil orange à l'arrière-plan.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap6/image.png)
+## [Minecraft 26.3 Snapshot 6](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-6)
+- Ajout d'une variante de camp abandonné pour chaque biome et ajustement des structures correspondantes
+- Les propriétaires de Realm peuvent de nouveau sélectionner Automatique comme région de leur Realm
+- L'écran Options du monde est maintenant accessible depuis le menu de pause à la place du bouton Ouvrir au réseau local
+  - Ajout d'une section Multijoueur, qui permet de régler l'ouverture au réseau local, l'accès aux commandes et le port utilisé
+  - Le bouton En ligne est maintenant toujours affiché dans le menu Options
+- Les blocs du terrain utilisent maintenant `MultiDrawIndirect` pour leur rendu sur les appareils compatibles
+- DP version 113.0 :
+  - Suppression de l'argument `gamemode` de la commande `/publish`, le mode de jeu devant être défini avec `/defaultgamemode` ou `/gamemode`
+  - Les composants de donnée `minecraft:cooking_fuel`, `minecraft:brewing_fuel` et `minecraft:compostable` acceptent maintenant des nombres définis directement
+  - Ajout du nbt `invulnerable_time`, qui rend une créature invulnérable pendant un nombre défini de ticks
+  - Le type de table de butin `minecraft:block_interact` fournit maintenant la position centrale du bloc dans le paramètre de contexte `origin`
+  - Modification du format des bruits :
+    - `firstOctave` a été renommé en `base_octave` et `amplitudes` en `amplitude_modifiers`
+    - Ajout de `base_amplitude`, qui règle l'amplitude de sortie, de `octave_count`, qui définit le nombre d'octaves, et de `normalize`, qui contrôle la normalisation de l'amplitude
+  - Ajout des fonctions de densité `minecraft:pow`, `minecraft:sqrt` et `minecraft:log`, qui calculent respectivement une puissance, une racine carrée et un logarithme naturel
+  - Ajout de la fonction de densité `minecraft:sign`, qui renvoie le signe de sa valeur d'entrée
+  - Ajout de la fonction de densité `minecraft:distance_to_point`, qui calcule la distance jusqu'à un point fixe selon la métrique choisie
+  - La fonction de densité `minecraft:y_clamped_gradient` a été renommée en `minecraft:gradient` et peut maintenant agir sur n'importe quel axe avec plusieurs modes de répétition
+  - Ajout de la fonction de densité `minecraft:slice`, qui échantillonne une fonction sur un plan défini en fixant un axe à une coordonnée
+  - La fonction de densité `minecraft:end_islands` a été renommée en `minecraft:end_outer_islands` et ne calcule plus la densité de l'île principale
+  - Le type d'élément de bassin `minecraft:feature_pool_element` peut maintenant se connecter à des blocs de puzzle ayant n'importe quel nom cible
+- RP version 94.0 :
+  - Modification des shaders `terrain.vsh` et `terrain.fsh` pour prendre en charge le rendu multi-draw
+  - Ajout de la définition `RENDERPEARL_EXPLICIT_DEPTH_INVARIANCE`, qui force les shaders de transparence indépendante de l'ordre à produire explicitement une valeur de profondeur sur les appareils concernés
+  - Le champ `trim_palette_replacements` des équipements a été remplacé par `trim_overrides`, qui permet de remplacer la texture ou la palette selon le matériau ou le motif d'ornement
+- [38 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%206)
