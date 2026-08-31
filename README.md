@@ -1,16 +1,29 @@
-![Noor est assis sur un coussin orange dans un camp abandonné de la forêt tachetée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap9/image.png)
-## [Minecraft 26.3 Snapshot 9](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-9)
-- Ajout de réglages distincts pour la distance d'affichage et la distance de simulation des Realms, avec une distance d'affichage maximale de 25 chunks
-- Les Endermen subissent maintenant les dégâts des projectiles lorsqu'ils chevauchent une entité
-- Les Endermen et les Shulkers ne peuvent plus se téléporter sur la bedrock
-- Sur macOS, ajout de l'option Émulation du clic droit, qui permet d'utiliser Contrôle + clic gauche comme un clic droit
-- DP version 117.0 :
-  - Les progrès racines visibles doivent maintenant définir un arrière-plan, qui ne peut être utilisé que par ces progrès
-  - La source de slots `minecraft:group` et la fonction de butin `minecraft:sequence` ne peuvent utiliser une définition directe que dans un fichier de premier niveau
-  - Le champ `summands` du fournisseur de nombres `minecraft:sum` a été renommé en `operands` et doit contenir au moins une valeur
-  - Ajout des fournisseurs de nombres `minecraft:product`, `minecraft:minimum`, `minecraft:maximum` et `minecraft:average`, qui renvoient respectivement le produit, la valeur minimale, la valeur maximale et la moyenne de leurs opérandes
-  - Ajout du tag de blocs `#uncarvable`, qui définit les blocs que les sculpteurs ne peuvent jamais creuser
-  - Ajout des tags de blocs `#dangerous_for_teleportation`, `#cat_does_not_teleport_to`, `#enderman_does_not_teleport_to`, `#shulker_does_not_teleport_to` et `#consumable_does_not_teleport_to`, qui contrôlent les blocs interdits ou dangereux selon le type de téléportation
-  - Ajout du tag d'objets `#brewing_potion_inputs`, qui définit les objets pouvant être placés dans les emplacements de potions de l'alambic
-  - Ajout des tags de potions `#douses_fire`, `#hurts_water_sensitive_entities`, `#extinguishes_entities` et `#rehydrates_axolotls`, qui définissent respectivement les potions éteignant le feu, blessant les entités sensibles à l'eau, éteignant les entités et réhydratant les axolotls
-- [50 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%209)
+![Un ours polaire et ses deux petits marchent dans un biome de pics de glace bordant une forêt tachetée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap10/image.png)
+## [Minecraft 26.3 Snapshot 10](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-10)
+- Le panorama du menu principal représente maintenant une forêt tachetée avec un camp abandonné
+- Ajout d'un écran de présentation des principales fonctionnalités de Realms, accessible depuis le bouton Ajouter un Realm
+- L'icône du mode Aventure dans le sélecteur de mode de jeu utilise maintenant la carte au trésor enfoui
+- Annulation des modifications apportées au comportement et aux animations des noyés durant le développement de la version 26.3
+- Les enchantements s'appliquent maintenant aux objets qui s'endommagent en protégeant un mort-vivant du soleil
+- La téléportation aléatoire après avoir mangé un fruit de chorus affiche maintenant des particules dans la direction du déplacement
+- Plusieurs cartes d'exploration ont été renommées pour harmoniser leurs noms
+- Les sous-titres indiquent maintenant le son le plus récent à portée
+- DP version 118.0 :
+  - Réintroduction du type d'animation `none` pour la commande `/swing` et les composants `minecraft:attack_animation` et `minecraft:interact_animation`, qui permet de désactiver l'animation
+  - Ajout de la commande `/compute`, qui évalue un fournisseur de nombres dans le contexte par défaut, celui d'un bloc ou celui d'une entité
+  - Ajout de la source `compute` à `/data modify`, qui évalue un fournisseur de nombres et utilise son résultat comme entier ou nombre à virgule flottante
+  - Ajout du champ `directional_particles` à l'effet `teleport_randomly` du composant `minecraft:consumable`, qui contrôle la traînée de particules produite lors de la téléportation
+  - Le composant `minecraft:block_transformer` doit maintenant référencer une entrée du nouveau registre `minecraft:block_transformer`, qui définit les règles de transformation d'un bloc avec un objet
+  - Ajout des types de tables de butin `minecraft:command_compute_default`, `minecraft:command_compute_position` et `minecraft:command_compute_entity`, qui fournissent les contextes utilisés par la commande `/compute`
+  - Le champ `tag` de la fonction de butin `minecraft:set_loot_table` a été renommé en `loot_table_id`
+  - Dans les paramètres de bruit, `preliminary_surface_level` a été renommé en `chunk_surface_level` et le champ `ore_veins_enabled` a été supprimé
+  - Ajout de la règle de matériau `minecraft:ore_vein`, qui configure la génération des filons de minerai
+  - La fonction de densité `minecraft:noise` accepte maintenant les champs `shift_x`, `shift_y` et `shift_z`, qui déplacent son domaine sur chaque axe, et remplace `minecraft:shifted_noise`
+  - La fonction de densité `minecraft:interpolated` peut maintenant définir la taille de ses cellules d'interpolation avec `cell_size_xz` et `cell_size_y`
+  - La fonction de densité `minecraft:cache_once` a été renommée en `minecraft:cache` et remplace également `minecraft:cache_2d`, `minecraft:cache_all_in_cell` et `minecraft:flat_cache`
+  - Ajout des tags de blocs `#nether_portal_frame` et `#conduit_effect_block`, qui définissent respectivement les blocs pouvant former un portail du Nether et ceux pouvant activer un conduit
+  - Ajout des tags de fluides `#axolotl_try_find_liquid`, `#dolphin_try_find_liquid`, `#frog_try_find_land_near_liquid` et `#entity_floatable`, qui contrôlent la recherche de fluides par certaines créatures et les fluides faisant flotter les entités
+- RP version 97.0 :
+  - Les textures `item/trial_chamber_map.png` et `item/jungle_temple_map.png` ont été renommées en `item/buried_trial_chambers_map.png` et `item/jungle_pyramid_map.png`
+  - Ajout de textures d'interface pour l'écran de présentation et les boutons Realms
+- [63 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%2010)
