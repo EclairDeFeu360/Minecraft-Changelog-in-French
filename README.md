@@ -1,29 +1,21 @@
-![Un ours polaire et ses deux petits marchent dans un biome de pics de glace bordant une forêt tachetée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-snap10/image.png)
-## [Minecraft 26.3 Snapshot 10](https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-10)
-- Le panorama du menu principal représente maintenant une forêt tachetée avec un camp abandonné
-- Ajout d'un écran de présentation des principales fonctionnalités de Realms, accessible depuis le bouton Ajouter un Realm
-- L'icône du mode Aventure dans le sélecteur de mode de jeu utilise maintenant la carte au trésor enfoui
-- Annulation des modifications apportées au comportement et aux animations des noyés durant le développement de la version 26.3
-- Les enchantements s'appliquent maintenant aux objets qui s'endommagent en protégeant un mort-vivant du soleil
-- La téléportation aléatoire après avoir mangé un fruit de chorus affiche maintenant des particules dans la direction du déplacement
-- Plusieurs cartes d'exploration ont été renommées pour harmoniser leurs noms
-- Les sous-titres indiquent maintenant le son le plus récent à portée
-- DP version 118.0 :
-  - Réintroduction du type d'animation `none` pour la commande `/swing` et les composants `minecraft:attack_animation` et `minecraft:interact_animation`, qui permet de désactiver l'animation
-  - Ajout de la commande `/compute`, qui évalue un fournisseur de nombres dans le contexte par défaut, celui d'un bloc ou celui d'une entité
-  - Ajout de la source `compute` à `/data modify`, qui évalue un fournisseur de nombres et utilise son résultat comme entier ou nombre à virgule flottante
-  - Ajout du champ `directional_particles` à l'effet `teleport_randomly` du composant `minecraft:consumable`, qui contrôle la traînée de particules produite lors de la téléportation
-  - Le composant `minecraft:block_transformer` doit maintenant référencer une entrée du nouveau registre `minecraft:block_transformer`, qui définit les règles de transformation d'un bloc avec un objet
-  - Ajout des types de tables de butin `minecraft:command_compute_default`, `minecraft:command_compute_position` et `minecraft:command_compute_entity`, qui fournissent les contextes utilisés par la commande `/compute`
-  - Le champ `tag` de la fonction de butin `minecraft:set_loot_table` a été renommé en `loot_table_id`
-  - Dans les paramètres de bruit, `preliminary_surface_level` a été renommé en `chunk_surface_level` et le champ `ore_veins_enabled` a été supprimé
-  - Ajout de la règle de matériau `minecraft:ore_vein`, qui configure la génération des filons de minerai
-  - La fonction de densité `minecraft:noise` accepte maintenant les champs `shift_x`, `shift_y` et `shift_z`, qui déplacent son domaine sur chaque axe, et remplace `minecraft:shifted_noise`
-  - La fonction de densité `minecraft:interpolated` peut maintenant définir la taille de ses cellules d'interpolation avec `cell_size_xz` et `cell_size_y`
-  - La fonction de densité `minecraft:cache_once` a été renommée en `minecraft:cache` et remplace également `minecraft:cache_2d`, `minecraft:cache_all_in_cell` et `minecraft:flat_cache`
-  - Ajout des tags de blocs `#nether_portal_frame` et `#conduit_effect_block`, qui définissent respectivement les blocs pouvant former un portail du Nether et ceux pouvant activer un conduit
-  - Ajout des tags de fluides `#axolotl_try_find_liquid`, `#dolphin_try_find_liquid`, `#frog_try_find_land_near_liquid` et `#entity_floatable`, qui contrôlent la recherche de fluides par certaines créatures et les fluides faisant flotter les entités
-- RP version 97.0 :
-  - Les textures `item/trial_chamber_map.png` et `item/jungle_temple_map.png` ont été renommées en `item/buried_trial_chambers_map.png` et `item/jungle_pyramid_map.png`
-  - Ajout de textures d'interface pour l'écran de présentation et les boutons Realms
-- [63 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Snapshot%2010)
+![Noor s'approche d'un camp abandonné sur le dos d'un cochon guidé à l'aide d'une carotte sur un bâton.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-pre1/image.png)
+## [Minecraft 26.3 Pre-Release 1](https://www.minecraft.net/en-us/article/minecraft-26-3-pre-release-1)
+- Sur macOS, le plein écran exclusif est de nouveau disponible
+- Sur macOS, ajout de l'option Visibilité du menu/Dock, qui contrôle l'affichage de la barre des menus et du Dock lorsque la souris atteint le bord de l'écran en plein écran
+- Le curseur est maintenant confiné à la fenêtre lorsque le plein écran exclusif est actif
+- DP version 119.0 :
+  - Les fournisseurs de nombres contextuels sont maintenant séparés entre les registres `minecraft:context_int_provider` et `minecraft:context_float_provider`, tandis que leurs types utilisent `minecraft:context_int_provider_type` et `minecraft:context_float_provider_type`, afin d'éviter les pertes accidentelles de précision
+  - Les fournisseurs arithmétiques disposent maintenant de variantes entières et décimales ; `minecraft:sum`, `minecraft:product`, `minecraft:minimum`, `minecraft:maximum` et `minecraft:average` ont été renommés en `minecraft:add`, `minecraft:mul`, `minecraft:min`, `minecraft:max` et `minecraft:avg`
+  - Ajout de fournisseurs permettant notamment les conversions entre entiers et nombres décimaux, les opérations arithmétiques, les arrondis, les fonctions trigonométriques et la lecture de scores, de stockages ou d'attributs d'environnement
+  - Les fournisseurs de nombres utilisés par le composteur, la cuisson et l'alchimie ont été déplacés vers le registre entier ou décimal correspondant
+  - Les commandes `/compute` et `/data modify ... compute` doivent maintenant préciser si elles évaluent un fournisseur entier ou décimal
+  - Les composants `minecraft:cooking_fuel`, `minecraft:brewing_fuel` et `minecraft:compostable`, les tables de butin, les fonctions de butin et les échanges de villageois utilisent maintenant le type de fournisseur adapté à chaque champ
+  - Le prédicat `minecraft:value_check` a été remplacé par `minecraft:int_value_check` et `minecraft:float_value_check`, qui comparent respectivement un fournisseur entier ou décimal à une valeur ou une plage
+  - Le champ `cookingtime` est maintenant obligatoire dans toutes les recettes de cuisson ; les recettes personnalisées du fumoir et du haut fourneau doivent utiliser une durée deux fois supérieure à l'ancienne valeur
+  - Ajout du registre `worldgen/block_state_provider`, qui permet de définir les fournisseurs d'états de blocs dans des fichiers indépendants et de les référencer par leur identifiant
+  - Plusieurs types de fournisseurs d'états de blocs ont été raccourcis, notamment `minecraft:simple_state_provider` en `minecraft:simple` et `minecraft:rule_based_state_provider` en `minecraft:rule_based`
+  - Le fournisseur d'état de bloc `minecraft:rule_based` poursuit maintenant l'évaluation des règles lorsqu'une règle ne renvoie aucun résultat
+  - Ajout du tag d'objets `#furnace_fuel_bottom_takeable`, qui définit les objets qu'un entonnoir placé sous un fourneau peut retirer de l'emplacement de combustible
+- RP version 97.1 :
+  - Ajout du shader `core/blit_depth.fsh`, qui copie le contenu des textures de profondeur sur les appareils où les méthodes du moteur de rendu ne fonctionnent pas
+- [41 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Pre-Release%201)
