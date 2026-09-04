@@ -1,21 +1,6 @@
-![Noor s'approche d'un camp abandonné sur le dos d'un cochon guidé à l'aide d'une carotte sur un bâton.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-pre1/image.png)
-## [Minecraft 26.3 Pre-Release 1](https://www.minecraft.net/en-us/article/minecraft-26-3-pre-release-1)
-- Sur macOS, le plein écran exclusif est de nouveau disponible
-- Sur macOS, ajout de l'option Visibilité du menu/Dock, qui contrôle l'affichage de la barre des menus et du Dock lorsque la souris atteint le bord de l'écran en plein écran
-- Le curseur est maintenant confiné à la fenêtre lorsque le plein écran exclusif est actif
-- DP version 119.0 :
-  - Les fournisseurs de nombres contextuels sont maintenant séparés entre les registres `minecraft:context_int_provider` et `minecraft:context_float_provider`, tandis que leurs types utilisent `minecraft:context_int_provider_type` et `minecraft:context_float_provider_type`, afin d'éviter les pertes accidentelles de précision
-  - Les fournisseurs arithmétiques disposent maintenant de variantes entières et décimales ; `minecraft:sum`, `minecraft:product`, `minecraft:minimum`, `minecraft:maximum` et `minecraft:average` ont été renommés en `minecraft:add`, `minecraft:mul`, `minecraft:min`, `minecraft:max` et `minecraft:avg`
-  - Ajout de fournisseurs permettant notamment les conversions entre entiers et nombres décimaux, les opérations arithmétiques, les arrondis, les fonctions trigonométriques et la lecture de scores, de stockages ou d'attributs d'environnement
-  - Les fournisseurs de nombres utilisés par le composteur, la cuisson et l'alchimie ont été déplacés vers le registre entier ou décimal correspondant
-  - Les commandes `/compute` et `/data modify ... compute` doivent maintenant préciser si elles évaluent un fournisseur entier ou décimal
-  - Les composants `minecraft:cooking_fuel`, `minecraft:brewing_fuel` et `minecraft:compostable`, les tables de butin, les fonctions de butin et les échanges de villageois utilisent maintenant le type de fournisseur adapté à chaque champ
-  - Le prédicat `minecraft:value_check` a été remplacé par `minecraft:int_value_check` et `minecraft:float_value_check`, qui comparent respectivement un fournisseur entier ou décimal à une valeur ou une plage
-  - Le champ `cookingtime` est maintenant obligatoire dans toutes les recettes de cuisson ; les recettes personnalisées du fumoir et du haut fourneau doivent utiliser une durée deux fois supérieure à l'ancienne valeur
-  - Ajout du registre `worldgen/block_state_provider`, qui permet de définir les fournisseurs d'états de blocs dans des fichiers indépendants et de les référencer par leur identifiant
-  - Plusieurs types de fournisseurs d'états de blocs ont été raccourcis, notamment `minecraft:simple_state_provider` en `minecraft:simple` et `minecraft:rule_based_state_provider` en `minecraft:rule_based`
-  - Le fournisseur d'état de bloc `minecraft:rule_based` poursuit maintenant l'évaluation des règles lorsqu'une règle ne renvoie aucun résultat
-  - Ajout du tag d'objets `#furnace_fuel_bottom_takeable`, qui définit les objets qu'un entonnoir placé sous un fourneau peut retirer de l'emplacement de combustible
-- RP version 97.1 :
-  - Ajout du shader `core/blit_depth.fsh`, qui copie le contenu des textures de profondeur sur les appareils où les méthodes du moteur de rendu ne fonctionnent pas
-- [41 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Pre-Release%201)
+![Alex fait une sieste dans un camp abandonné de la forêt tachetée tandis que des lucioles et des abeilles volent alentour.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3-pre2/image.png)
+## [Minecraft 26.3 Pre-Release 2](https://www.minecraft.net/en-us/article/minecraft-26-3-pre-release-2)
+- Suppression du rendu personnalisé des suggestions de l'IME
+- DP version 120.0 :
+  - Le tag de structures `#on_abandoned_camp_windswept`, qui définit les structures générées sur les camps abandonnés de la forêt venteuse, a été renommé en `#on_abandoned_camp_windswept_forest`
+- [37 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.3%20Pre-Release%202)
