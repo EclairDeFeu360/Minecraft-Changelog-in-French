@@ -1,8 +1,31 @@
-![Efe est assis sur un coussin devant un feu de camp, dans un camp abandonné au cœur d’une forêt ambrée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.3/image.png)
-# [Minecraft 26.3](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-3)
-- [Page de résumé du drop "Destination nature"](https://www.minecraft.net/en-us/article/play-wilderness-bound-game-drop)
-- [Lien du trailer](<https://youtu.be/1HCrV7mFWr8>)
-- [Liste des changements techniques](https://misode.github.io/versions/?id=26.3&tab=changelog)
-- [Liste des bugs fixés](https://www.minecraft.net/en-us/article/minecraft-java-edition-26-3#:~:text=Fixed%20bugs%20in%2026.3)
-- DP version 121.0
-- RP version 97.1
+![Une montagne au loin, encadrée par un mélange de peupliers et de cerisiers.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap1/image.png)
+## [Minecraft 26.4 Snapshot 1](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-1)
+- Lors de la mise à niveau des mondes antérieurs à Caves & Cliffs, des cavernes de soufre se génèrent maintenant sous les anciens chunks
+- Les champignons rouges et bruns peuvent maintenant être placés sur tout bloc dont la face supérieure est solide, quelle que soit la luminosité
+- Le réglage API graphique utilise maintenant Vulkan par défaut et n'est plus modifié automatiquement après un plantage au démarrage
+- [Le Minecraft Live a été annoncé](https://www.minecraft.net/fr-fr/live) :
+  - <t:1790442000:R> le <t:1790442000:F>
+  - [Le lien du trailer](<https://www.youtube.com/watch?v=UiPcEW_d9Io>)
+- Protocole réseau :
+  - Ajout du paquet personnalisé `minecraft:mod_list`, qui permet au client de communiquer la liste de ses mods au serveur afin de simplifier le débogage
+  - Le champ `host` du paquet `minecraft:intention` accepte maintenant des propriétés au format de requête d'URL, avec une limite de 1 024 caractères et la prise en charge du domaine d'origine des redirections SRV
+  - Ajout du champ `properties` au paquet `minecraft:transfer`, qui définit les propriétés à transmettre au serveur cible lors d'un transfert
+  - Ajout de la propriété de serveur `allowed-connection-ids`, qui limite les connexions aux adresses contenant un identifiant `_id` autorisé
+  - Ajout de la propriété de serveur `status-contact-details`, qui transmet dans la réponse de statut un moyen de contacter les propriétaires du serveur
+  - Ajout de la propriété de serveur `enable-legacy-status`, qui permet de désactiver le protocole de statut antérieur à la version 1.7
+- DP version 122.0 :
+  - Les entrées d'une source de biomes multi-bruit ne peuvent plus se chevaucher pour tous les paramètres de bruit avec le même décalage
+  - La commande `/fillbiome` modifie maintenant les biomes avec une précision au bloc
+  - La conversion de données NBT à virgule flottante vers un entier arrondit maintenant à l'entier inférieur avant de limiter le résultat à la valeur valide la plus proche
+  - Ajout du champ `trunk_width` au placeur de tronc `straight_trunk_placer`, qui définit la largeur du tronc autour de son origine
+  - Les éléments de terrain placés inclus dans les biomes sont maintenant validés afin que leur position reste dans une zone de 3 × 3 chunks
+  - Dans le modificateur de placement `cuboid`, les champs `xz_size` et `y_size` représentent maintenant les dimensions réelles du cuboïde
+  - Le champ `positions` du modificateur de placement `fixed_placement` doit maintenant contenir au moins un élément
+  - Suppression du champ `default_block` des paramètres de bruit ; l'air est maintenant utilisé par défaut et les autres blocs doivent être définis par une règle de matériau
+  - La condition de matériau `minecraft:steep`, qui détecte les pentes, ne dépend plus de l'ordre d'évaluation des modifications de hauteur des badlands érodées
+  - Ajout du tag de biomes `#generated_in_below_zero_retrogen`, qui définit les biomes générés sous les mondes antérieurs à Caves & Cliffs
+  - Ajout du tag de biomes `#is_cave`, qui regroupe les biomes de grottes
+- RP version 98.0 :
+  - Les shaders de transparence indépendante de l'ordre utilisent maintenant une accumulation par tranches de profondeur
+  - Suppression de la définition `OIT_WAVELET_RANK`, remplacement de `OIT_COEFF_COUNT` par `OIT_NUMBER_OF_DEPTH_BINS`, qui définit le nombre de tranches de profondeur, et renommage de `OIT_COEFF_ATTACHMENT_COUNT` en `OIT_TRANSMITTANCE_TARGET_COUNT`, qui définit le nombre de cibles de transmittance
+- [29 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%201)
