@@ -1,13 +1,41 @@
-![Steve chevauche un cheval au soleil couchant.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap2/image.png)
-## [Minecraft 26.4 Snapshot 2](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-2)
-- Lorsque Transparence améliorée est activée, le ciel et les nuages situés derrière le terrain se fondent maintenant dans le brouillard de distance d'affichage, masquant la limite entre le ciel et le terrain
-- Dans l'Overworld, la moitié inférieure du ciel masque maintenant les astres, comme le soleil, la lune et les étoiles
-- L'écran de débogage F3 a été remanié pour être plus lisible et compréhensible
-- DP version 122.1 :
-  - Ajout de l'attribut d'environnement `minecraft:visual/has_sky_occluder`, qui détermine si une partie du ciel doit être masquée par la couleur du brouillard ; il est activé par défaut dans l'Overworld et désactivé dans le Nether et l'End
-  - Ajout du prédicat `below_heightmap`, qui vérifie si une position est située sous la valeur de la carte de hauteur indiquée par le champ `heightmap`
-- RP version 99.0 :
-  - Le shader `screenquad.vsh` a été renommé en `screentriangle.vsh` afin d'indiquer qu'il représente un triangle
-  - Le shader `clouds.fsh` ne prend plus directement en charge la transparence indépendante de l'ordre ; ajout de `blit_clouds.fsh`, qui transfère les nuages depuis une cible hors écran vers les cibles de transparence
-  - Ajout des shaders `sky_occluder.vsh` et `sky_occluder.fsh`, qui masquent une partie du ciel avec la couleur du brouillard selon l'environnement
-- [53 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%202)
+![Efe explore une caverne de glace remplie de stalactites et de cristaux de glace lumineux, entouré de plusieurs Givrés dont certains tiennent des glaçons.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap3/image.png)
+## [Minecraft 26.4 Snapshot 3](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-3)
+- Ajout du biome des cavernes de glace :
+  - Il se génère sous les biomes froids de l'Overworld et se compose principalement de glace compactée et de calcite
+  - Des stalactites et de grandes formations de glace, de la neige, des cristaux de glace et des poches de pierre ou d'ardoise des abîmes contenant des minerais s'y génèrent
+  - Des Vagabonds et des Givrés peuvent y apparaître en plus des créatures habituelles des grottes
+- Ajout du cristal de glace, un bloc lumineux pouvant être placé dans toutes les directions et qui se brise lorsque son bloc de support est retiré
+- Ajout des stalactites de glace :
+  - Elles peuvent pousser naturellement depuis le plafond jusqu'à une longueur de cinq blocs, uniquement sans source lumineuse proche et en dehors du Nether
+  - Elles peuvent être placées dans toutes les directions, se brisent près d'une source lumineuse ou dans le Nether et infligent des dégâts en tombant ou lorsqu'une entité tombe dessus
+- Ajout du Givré, une variante de zombie apparaissant dans les biomes froids ou glacés :
+  - Il alterne entre les attaques de mêlée, qui appliquent l'effet Gel, et le lancer de glaçons selon sa distance à la cible
+  - Il est immunisé au gel, n'est pas ralenti par la neige poudreuse et peut marcher dessus
+  - Il redevient un zombie après être resté sous l'eau, tandis que les zombies et zombies momifiés deviennent des Givrés dans la neige poudreuse
+  - Il laisse tomber de la chair putréfiée et des glaçons
+- Ajout de l'effet Gel, qui fait progressivement geler et trembler les joueurs avant de leur infliger des dégâts
+  - L'armure en cuir protège du gel sans empêcher ni retirer l'effet, et les créatures vulnérables au gel subissent cinq fois plus de dégâts
+  - Les glaçons permettent de préparer des potions de gel normales, jetables et persistantes, ainsi que de fabriquer des flèches de gel
+- Ajout des glaçons, des projectiles qui infligent jusqu'à 4 points de dégâts selon leur vitesse, repoussent leur cible et se brisent à l'impact
+- La neige peut maintenant être placée sur la glace compactée et les boules de neige repoussent maintenant les joueurs
+- La visualisation de la carte de lumière peut maintenant être configurée avec l'option de débogage `lightmap_texture`, enregistrée dans le profil et affichable avec les graphiques de FPS et du réseau
+- La liste d'amis a été remaniée avec une recherche et un tri par présence ou ordre alphabétique ; sélectionner l'icône d'un joueur ouvre maintenant ses options
+- Ajout de l'écran Options du joueur, qui rassemble les demandes d'amis, la mise en sourdine et le signalement d'un joueur
+- L'écran Autres joueurs remplace Interactions sociales dans les mondes ouverts au multijoueur et répertorie les joueurs présents ou récemment actifs
+- Les brouillons de signalement pouvant être repris ne demandent plus confirmation à la sortie d'un monde, tandis que quitter le jeu avertit lorsqu'un brouillon non envoyé serait perdu
+- Ajout des options de débogage `chunk_section_status`, qui affiche l'état de rendu des sections de chunks, et `chunk_load_status`, qui affiche leur état de chargement séparément de `visualize_chunks_on_server`
+- DP version 123.0 :
+  - Ajout du champ `placement_options` à l'élément de terrain `minecraft:speleothem_cluster`, qui regroupe le mode de placement, la transformation du bloc de base et l'autorisation du placement dans l'eau
+  - L'élément de terrain `minecraft:large_speleothem` a été renommé en `minecraft:large_dripstone` et dispose du champ `base_block`, qui définit le fournisseur d'état de bloc utilisé pour construire la grande formation
+  - Ajout du bruit `ice_cave_gradient`, utilisé pour la génération des cavernes de glace, et de placements de minerais qui créent une poche de pierre ou d'ardoise des abîmes avant d'y placer le minerai
+  - **Ajout du registre `minecraft:block_sound_set`, qui définit le volume, la hauteur et les sons produits par différentes catégories de blocs**
+  - Ajout des tags de blocs `#ice_cave_ore_replaceables`, `#melts_icicle_above` et `#large_icicle_replaceable`, qui définissent respectivement les blocs remplaçables par les minerais, ceux faisant fondre une stalactite au-dessus et ceux remplaçables par les grandes stalactites des cavernes de glace
+  - **Ajout de tags de blocs sous `#pathfinding/` qui contrôlent les blocs évités, dangereux, traversables ou ralentissants pour les déplacements des créatures**
+  - Ajout des tags d'objets `#frostbite_preferred_weapons`, `#knocks_back_players_even_with_zero_damage` et `#sheep_wool_dyes`, qui définissent respectivement les armes utilisées par les Givrés, les objets repoussant les joueurs sans dégâts et les objets pouvant teindre la laine des moutons
+  - Ajout du tag de biomes `#spawns_strays_without_powder_snow`, qui autorise l'apparition de Vagabonds sans neige poudreuse à la surface
+  - Ajout du tag d'ensembles de sons de blocs `#sounds_wooden`, qui fait produire aux chevaux un son de galop lorsqu'ils marchent sur les blocs concernés
+  - Suppression de la particule `minecraft:item_snowball` et ajout de `minecraft:freezing`, émise par les entités affectées par l'effet Gel
+- RP version 100.0 :
+  - Ajout des textures, modèles, sons et particules des cavernes de glace, des Givrés, de l'effet Gel et des nouvelles interfaces sociales
+  - Plusieurs textures de la liste d'amis et du menu pause ont été ajoutées, renommées ou supprimées pour prendre en charge les nouveaux écrans
+- [18 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%203)
