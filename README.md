@@ -1,41 +1,31 @@
-![Efe explore une caverne de glace remplie de stalactites et de cristaux de glace lumineux, entouré de plusieurs Givrés dont certains tiennent des glaçons.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap3/image.png)
-## [Minecraft 26.4 Snapshot 3](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-3)
-- Ajout du biome des cavernes de glace :
-  - Il se génère sous les biomes froids de l'Overworld et se compose principalement de glace compactée et de calcite
-  - Des stalactites et de grandes formations de glace, de la neige, des cristaux de glace et des poches de pierre ou d'ardoise des abîmes contenant des minerais s'y génèrent
-  - Des Vagabonds et des Givrés peuvent y apparaître en plus des créatures habituelles des grottes
-- Ajout du cristal de glace, un bloc lumineux pouvant être placé dans toutes les directions et qui se brise lorsque son bloc de support est retiré
-- Ajout des stalactites de glace :
-  - Elles peuvent pousser naturellement depuis le plafond jusqu'à une longueur de cinq blocs, uniquement sans source lumineuse proche et en dehors du Nether
-  - Elles peuvent être placées dans toutes les directions, se brisent près d'une source lumineuse ou dans le Nether et infligent des dégâts en tombant ou lorsqu'une entité tombe dessus
-- Ajout du Givré, une variante de zombie apparaissant dans les biomes froids ou glacés :
-  - Il alterne entre les attaques de mêlée, qui appliquent l'effet Gel, et le lancer de glaçons selon sa distance à la cible
-  - Il est immunisé au gel, n'est pas ralenti par la neige poudreuse et peut marcher dessus
-  - Il redevient un zombie après être resté sous l'eau, tandis que les zombies et zombies momifiés deviennent des Givrés dans la neige poudreuse
-  - Il laisse tomber de la chair putréfiée et des glaçons
-- Ajout de l'effet Gel, qui fait progressivement geler et trembler les joueurs avant de leur infliger des dégâts
-  - L'armure en cuir protège du gel sans empêcher ni retirer l'effet, et les créatures vulnérables au gel subissent cinq fois plus de dégâts
-  - Les glaçons permettent de préparer des potions de gel normales, jetables et persistantes, ainsi que de fabriquer des flèches de gel
-- Ajout des glaçons, des projectiles qui infligent jusqu'à 4 points de dégâts selon leur vitesse, repoussent leur cible et se brisent à l'impact
-- La neige peut maintenant être placée sur la glace compactée et les boules de neige repoussent maintenant les joueurs
-- La visualisation de la carte de lumière peut maintenant être configurée avec l'option de débogage `lightmap_texture`, enregistrée dans le profil et affichable avec les graphiques de FPS et du réseau
-- La liste d'amis a été remaniée avec une recherche et un tri par présence ou ordre alphabétique ; sélectionner l'icône d'un joueur ouvre maintenant ses options
-- Ajout de l'écran Options du joueur, qui rassemble les demandes d'amis, la mise en sourdine et le signalement d'un joueur
-- L'écran Autres joueurs remplace Interactions sociales dans les mondes ouverts au multijoueur et répertorie les joueurs présents ou récemment actifs
-- Les brouillons de signalement pouvant être repris ne demandent plus confirmation à la sortie d'un monde, tandis que quitter le jeu avertit lorsqu'un brouillon non envoyé serait perdu
-- Ajout des options de débogage `chunk_section_status`, qui affiche l'état de rendu des sections de chunks, et `chunk_load_status`, qui affiche leur état de chargement séparément de `visualize_chunks_on_server`
-- DP version 123.0 :
-  - Ajout du champ `placement_options` à l'élément de terrain `minecraft:speleothem_cluster`, qui regroupe le mode de placement, la transformation du bloc de base et l'autorisation du placement dans l'eau
-  - L'élément de terrain `minecraft:large_speleothem` a été renommé en `minecraft:large_dripstone` et dispose du champ `base_block`, qui définit le fournisseur d'état de bloc utilisé pour construire la grande formation
-  - Ajout du bruit `ice_cave_gradient`, utilisé pour la génération des cavernes de glace, et de placements de minerais qui créent une poche de pierre ou d'ardoise des abîmes avant d'y placer le minerai
-  - **Ajout du registre `minecraft:block_sound_set`, qui définit le volume, la hauteur et les sons produits par différentes catégories de blocs**
-  - Ajout des tags de blocs `#ice_cave_ore_replaceables`, `#melts_icicle_above` et `#large_icicle_replaceable`, qui définissent respectivement les blocs remplaçables par les minerais, ceux faisant fondre une stalactite au-dessus et ceux remplaçables par les grandes stalactites des cavernes de glace
-  - **Ajout de tags de blocs sous `#pathfinding/` qui contrôlent les blocs évités, dangereux, traversables ou ralentissants pour les déplacements des créatures**
-  - Ajout des tags d'objets `#frostbite_preferred_weapons`, `#knocks_back_players_even_with_zero_damage` et `#sheep_wool_dyes`, qui définissent respectivement les armes utilisées par les Givrés, les objets repoussant les joueurs sans dégâts et les objets pouvant teindre la laine des moutons
-  - Ajout du tag de biomes `#spawns_strays_without_powder_snow`, qui autorise l'apparition de Vagabonds sans neige poudreuse à la surface
-  - Ajout du tag d'ensembles de sons de blocs `#sounds_wooden`, qui fait produire aux chevaux un son de galop lorsqu'ils marchent sur les blocs concernés
-  - Suppression de la particule `minecraft:item_snowball` et ajout de `minecraft:freezing`, émise par les entités affectées par l'effet Gel
-- RP version 100.0 :
-  - Ajout des textures, modèles, sons et particules des cavernes de glace, des Givrés, de l'effet Gel et des nouvelles interfaces sociales
-  - Plusieurs textures de la liste d'amis et du menu pause ont été ajoutées, renommées ou supprimées pour prendre en charge les nouveaux écrans
-- [18 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%203)
+![Un coffre posé sur un jukebox dans une caverne de glace, avec un squelette à l'arrière-plan.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap4/image.png)
+## [Minecraft 26.4 Snapshot 4](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-4)
+- Ajout des playlists de jukebox :
+  - Placer directement au-dessus d'un jukebox un coffre, un coffre piégé ou n'importe quelle variante de coffre en cuivre permet d'utiliser ses disques de musique comme playlist
+  - Les disques sont lus dans l'ordre des emplacements en ignorant les emplacements vides et les autres objets, puis la lecture reprend au début
+  - À la fin d'un disque, le jukebox l'échange avec le suivant ; éjecter le disque en cours passe également au prochain disque disponible
+  - Si le coffre ne contient aucun disque de musique, celui du jukebox est lu à nouveau
+- Ajout de la glace fragile, un bloc présent dans les cavernes de glace qui se fissure puis se brise lorsqu'un joueur ou une créature marche dessus
+  - Les Givrés peuvent marcher dessus sans la briser et elle se génère naturellement dans les crevasses des cavernes de glace
+  - Elle peut être obtenue avec Toucher de soie ou créée en faisant couler de l'eau sur de la glace bleue ; les blocs d'eau horizontalement adjacents se transforment alors en glace fragile
+- La glace givrée émet maintenant une vibration lorsqu'elle change d'état
+- Les faces intérieures de la glace, de la glace givrée et de la glace fragile ne sont plus affichées lorsque ces blocs sont placés les uns à côté des autres
+- Les zombies, les Noyés et les zombies momifiés sont maintenant immunisés au gel et aux dégâts de l'effet Gel
+- Dans la neige poudreuse, les Noyés deviennent maintenant des zombies avant de se transformer en Givrés
+- Ajout de sons propres à la glace, à la glace compactée, à la glace bleue et à la glace givrée
+- L'ensemble de sons de blocs `minecraft:amethyst` a été renommé en `minecraft:amethyst_block` pour correspondre aux noms des événements sonores
+- Le serveur déconnecte maintenant plus systématiquement les clients lorsqu'un paquet qu'ils ont envoyé provoque une erreur
+- DP version 124.0 :
+  - Suppression de l'événement sonore `minecraft:intentionally_empty`
+  - Les champs de sons des archétypes de cubes de soufre et des variantes sonores des poules, vaches, chats, cochons et loups sont maintenant optionnels
+  - Suppression des types de fluides `flowing_water` et `flowing_lava` ; les fluides utilisent maintenant les propriétés `level`, qui définit leur niveau, et `source`, qui indique s'il s'agit d'un bloc source
+  - Ajout du champ `state` au prédicat de bloc `matching_fluids`, qui permet de vérifier les propriétés de l'état d'un fluide
+  - Les champs `small_particle`, `large_particle` et `sound` de l'effet d'enchantement `minecraft:explode` sont maintenant optionnels
+  - Ajout du type d'élément de terrain `crevasse`, qui creuse dans les terrains exposés une crevasse sinueuse suivant la surface et pouvant être configurée avec des fournisseurs d'états de blocs et des prédicats
+  - Ajout du tag de blocs `#jukebox_containers`, qui définit les conteneurs pouvant fournir une playlist à un jukebox
+  - Ajout du tag de blocs `#face_occluding_ice_blocks`, qui définit les blocs de glace dont les faces adjacentes ne doivent pas être affichées
+  - Ajout du tag de types d'entités `#does_not_break_brittle_ice`, qui définit les créatures ne brisant pas la glace fragile en marchant dessus
+- RP version 100.1 :
+  - Modification des textures du jukebox et ajout de celles de la glace fragile et du dessous du jukebox
+  - Ajout des événements sonores de la glace bleue, de la glace fragile, de la glace givrée, de la glace compactée et de la transformation d'un Noyé en zombie
+- [39 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%204)
