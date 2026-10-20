@@ -1,31 +1,25 @@
-![Un coffre posé sur un jukebox dans une caverne de glace, avec un squelette à l'arrière-plan.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap4/image.png)
-## [Minecraft 26.4 Snapshot 4](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-4)
-- Ajout des playlists de jukebox :
-  - Placer directement au-dessus d'un jukebox un coffre, un coffre piégé ou n'importe quelle variante de coffre en cuivre permet d'utiliser ses disques de musique comme playlist
-  - Les disques sont lus dans l'ordre des emplacements en ignorant les emplacements vides et les autres objets, puis la lecture reprend au début
-  - À la fin d'un disque, le jukebox l'échange avec le suivant ; éjecter le disque en cours passe également au prochain disque disponible
-  - Si le coffre ne contient aucun disque de musique, celui du jukebox est lu à nouveau
-- Ajout de la glace fragile, un bloc présent dans les cavernes de glace qui se fissure puis se brise lorsqu'un joueur ou une créature marche dessus
-  - Les Givrés peuvent marcher dessus sans la briser et elle se génère naturellement dans les crevasses des cavernes de glace
-  - Elle peut être obtenue avec Toucher de soie ou créée en faisant couler de l'eau sur de la glace bleue ; les blocs d'eau horizontalement adjacents se transforment alors en glace fragile
-- La glace givrée émet maintenant une vibration lorsqu'elle change d'état
-- Les faces intérieures de la glace, de la glace givrée et de la glace fragile ne sont plus affichées lorsque ces blocs sont placés les uns à côté des autres
-- Les zombies, les Noyés et les zombies momifiés sont maintenant immunisés au gel et aux dégâts de l'effet Gel
-- Dans la neige poudreuse, les Noyés deviennent maintenant des zombies avant de se transformer en Givrés
-- Ajout de sons propres à la glace, à la glace compactée, à la glace bleue et à la glace givrée
-- L'ensemble de sons de blocs `minecraft:amethyst` a été renommé en `minecraft:amethyst_block` pour correspondre aux noms des événements sonores
-- Le serveur déconnecte maintenant plus systématiquement les clients lorsqu'un paquet qu'ils ont envoyé provoque une erreur
-- DP version 124.0 :
-  - Suppression de l'événement sonore `minecraft:intentionally_empty`
-  - Les champs de sons des archétypes de cubes de soufre et des variantes sonores des poules, vaches, chats, cochons et loups sont maintenant optionnels
-  - Suppression des types de fluides `flowing_water` et `flowing_lava` ; les fluides utilisent maintenant les propriétés `level`, qui définit leur niveau, et `source`, qui indique s'il s'agit d'un bloc source
-  - Ajout du champ `state` au prédicat de bloc `matching_fluids`, qui permet de vérifier les propriétés de l'état d'un fluide
-  - Les champs `small_particle`, `large_particle` et `sound` de l'effet d'enchantement `minecraft:explode` sont maintenant optionnels
-  - Ajout du type d'élément de terrain `crevasse`, qui creuse dans les terrains exposés une crevasse sinueuse suivant la surface et pouvant être configurée avec des fournisseurs d'états de blocs et des prédicats
-  - Ajout du tag de blocs `#jukebox_containers`, qui définit les conteneurs pouvant fournir une playlist à un jukebox
-  - Ajout du tag de blocs `#face_occluding_ice_blocks`, qui définit les blocs de glace dont les faces adjacentes ne doivent pas être affichées
-  - Ajout du tag de types d'entités `#does_not_break_brittle_ice`, qui définit les créatures ne brisant pas la glace fragile en marchant dessus
-- RP version 100.1 :
-  - Modification des textures du jukebox et ajout de celles de la glace fragile et du dessous du jukebox
-  - Ajout des événements sonores de la glace bleue, de la glace fragile, de la glace givrée, de la glace compactée et de la transformation d'un Noyé en zombie
-- [39 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%204)
+![Zuri lance des glaçons sur un Givré depuis une maison en briques de glace compactée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap5/image.png)
+## [Minecraft 26.4 Snapshot 5](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-5)
+- Ajout des briques de glace compactée :
+  - Elles se fabriquent avec quatre blocs de glace compactée disposés en carré
+  - Ajout de leurs variantes en dalle, escalier et muret ainsi que de la glace compactée sculptée, toutes également fabricables au tailleur de pierre
+  - Les briques et la glace compactée sculptée correspondent à l'archétype de cube de soufre à glissade rapide
+- Ajout du progrès d'Aventure "L'arroseur arrosé", obtenu en tuant un Givré avec un glaçon
+- Les créatures peuvent maintenant briser les pots décorés, les fleurs de chorus et les spéléothèmes avec des projectiles dans les mondes en mode Aventure, sauf si la règle de jeu `mob_griefing` est désactivée
+- La glace peut maintenant émettre des sons ambiants lorsqu'elle est entourée horizontalement d'au moins huit blocs de glace, avec de l'air au-dessus et de l'eau en dessous
+- Sur Windows, ajout du réglage vidéo expérimental "Préférer la présentation DXGI", désactivé par défaut, qui tente d'utiliser DirectX pour afficher le jeu et peut améliorer la saisie IME, le taux de rafraîchissement variable et le passage à une autre fenêtre en plein écran
+- Modification du protocole de connexion :
+  - Le chiffrement et la compression doivent maintenant être explicitement appliqués par le serveur puis confirmés par le client avant de prendre effet
+  - Les paires de paquets `minecraft:login_finished` et `minecraft:login_acknowledged`, ainsi que `minecraft:apply_options` et `minecraft:options_applied`, transmettent et confirment les options de connexion utilisées
+- DP version 125.0 :
+  - Les champs `sound` de `minecraft:consumable` ainsi que `equip_sound` et `shearing_sound` de `minecraft:equippable` sont maintenant entièrement optionnels
+  - Dans les éléments de terrain `minecraft:ore` et `minecraft:scattered_ore`, les blocs écartés parce qu'ils sont exposés à l'air ne passent plus à la règle de remplacement suivante
+  - La fonction de densité `minecraft:interpolated` a été renommée en `minecraft:upscale` ; elle échantillonne une fonction à résolution réduite puis la met à l'échelle avec un mode et une taille de cellule configurables pour chaque axe
+  - Ajout du tag de biomes `#spawns_ice_variants_underground`, qui autorise l'apparition souterraine des variantes froides sans accès au ciel
+  - Le tag de biomes `#spawns_strays_without_powder_snow` a été renommé en `#spawns_cold_variants_underground`, qui contrôle l'apparition souterraine des variantes froides
+  - Le tag de types d'entités `#ignores_poison_and_regen` a été remplacé par `#immune_to_poison` et `#immune_to_regeneration`, qui définissent séparément les créatures immunisées au Poison et à la Régénération
+  - Le tag de types d'entités `#freeze_immune_entity_types` a été renommé en `#immune_to_freezing`, qui définit les créatures immunisées au gel
+  - Ajout des tags de types d'entités `#immune_to_wither` et `#immune_to_weakness`, qui définissent les créatures immunisées respectivement aux effets Wither et Faiblesse
+- RP version 100.2 :
+  - Ajout des textures `block/chiseled_packed_ice.png` et `block/packed_ice_bricks.png` pour la glace compactée sculptée et les briques de glace compactée
+- [30 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%205)
