@@ -1,25 +1,27 @@
-![Zuri lance des glaçons sur un Givré depuis une maison en briques de glace compactée.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap5/image.png)
-## [Minecraft 26.4 Snapshot 5](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-5)
-- Ajout des briques de glace compactée :
-  - Elles se fabriquent avec quatre blocs de glace compactée disposés en carré
-  - Ajout de leurs variantes en dalle, escalier et muret ainsi que de la glace compactée sculptée, toutes également fabricables au tailleur de pierre
-  - Les briques et la glace compactée sculptée correspondent à l'archétype de cube de soufre à glissade rapide
-- Ajout du progrès d'Aventure "L'arroseur arrosé", obtenu en tuant un Givré avec un glaçon
-- Les créatures peuvent maintenant briser les pots décorés, les fleurs de chorus et les spéléothèmes avec des projectiles dans les mondes en mode Aventure, sauf si la règle de jeu `mob_griefing` est désactivée
-- La glace peut maintenant émettre des sons ambiants lorsqu'elle est entourée horizontalement d'au moins huit blocs de glace, avec de l'air au-dessus et de l'eau en dessous
-- Sur Windows, ajout du réglage vidéo expérimental "Préférer la présentation DXGI", désactivé par défaut, qui tente d'utiliser DirectX pour afficher le jeu et peut améliorer la saisie IME, le taux de rafraîchissement variable et le passage à une autre fenêtre en plein écran
-- Modification du protocole de connexion :
-  - Le chiffrement et la compression doivent maintenant être explicitement appliqués par le serveur puis confirmés par le client avant de prendre effet
-  - Les paires de paquets `minecraft:login_finished` et `minecraft:login_acknowledged`, ainsi que `minecraft:apply_options` et `minecraft:options_applied`, transmettent et confirment les options de connexion utilisées
-- DP version 125.0 :
-  - Les champs `sound` de `minecraft:consumable` ainsi que `equip_sound` et `shearing_sound` de `minecraft:equippable` sont maintenant entièrement optionnels
-  - Dans les éléments de terrain `minecraft:ore` et `minecraft:scattered_ore`, les blocs écartés parce qu'ils sont exposés à l'air ne passent plus à la règle de remplacement suivante
-  - La fonction de densité `minecraft:interpolated` a été renommée en `minecraft:upscale` ; elle échantillonne une fonction à résolution réduite puis la met à l'échelle avec un mode et une taille de cellule configurables pour chaque axe
-  - Ajout du tag de biomes `#spawns_ice_variants_underground`, qui autorise l'apparition souterraine des variantes froides sans accès au ciel
-  - Le tag de biomes `#spawns_strays_without_powder_snow` a été renommé en `#spawns_cold_variants_underground`, qui contrôle l'apparition souterraine des variantes froides
-  - Le tag de types d'entités `#ignores_poison_and_regen` a été remplacé par `#immune_to_poison` et `#immune_to_regeneration`, qui définissent séparément les créatures immunisées au Poison et à la Régénération
-  - Le tag de types d'entités `#freeze_immune_entity_types` a été renommé en `#immune_to_freezing`, qui définit les créatures immunisées au gel
-  - Ajout des tags de types d'entités `#immune_to_wither` et `#immune_to_weakness`, qui définissent les créatures immunisées respectivement aux effets Wither et Faiblesse
-- RP version 100.2 :
-  - Ajout des textures `block/chiseled_packed_ice.png` et `block/packed_ice_bricks.png` pour la glace compactée sculptée et les briques de glace compactée
-- [30 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%205)
+![Kai pêche sous la glace, assis sur un coussin bleu clair devant un igloo en briques de neige.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap6/image.png)
+## [Minecraft 26.4 Snapshot 6](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-6)
+- Ajout des briques de neige :
+  - Elles se fabriquent avec quatre blocs de neige disposés en carré et possèdent des variantes en dalle, escalier et muret
+  - Elles ne peuvent pas être fabriquées au tailleur de pierre et ne se récupèrent que si elles sont minées avec une pelle
+  - Elles correspondent à l'archétype de cube de soufre à glissade rapide
+- Ajout de l'archétype froid du cube de soufre :
+  - Il possède les propriétés de l'archétype à glissade rapide, flotte et transforme l'eau sous lui en glace givrée lorsqu'il se déplace, comme l'enchantement Semelles givrantes
+  - La glace givrée ne se forme que si le déplacement commence au sol et que de l'air se trouve au-dessus de l'eau
+  - Un cube de soufre adopte cet archétype lorsqu'il absorbe un bloc de glace bleue
+- Les créatures traversant de la lave en chutant peuvent subir légèrement moins de dégâts de chute
+- Toutes les variantes de briques de glace compactée ne se récupèrent maintenant que si elles sont minées avec une pioche
+- La glace fragile ne se fissure plus lorsqu'un Vagabond se tient dessus
+- Les cristaux de glace peuvent maintenant émettre des sons ambiants lorsqu'ils sont placés sur de la glace compactée
+- Le jeu alloue maintenant automatiquement jusqu'à 25 % de la mémoire vive du système à Java, dans la limite de 4 Go
+- DP version 125.1 :
+  - Ajout du champ optionnel `location_based_effects` aux archétypes de cubes de soufre, qui applique une liste d'effets d'enchantement dépendant de la position
+  - Les champs `from_coordinate` et `to_coordinate` de la fonction de densité `minecraft:gradient` acceptent maintenant une ancre verticale lorsque l'axe est `y`
+  - Ajout de la fonction de densité `minecraft:domain_warp`, qui décale les coordonnées d'échantillonnage de sa fonction d'entrée sur chaque axe
+  - Ajout du champ optionnel `corner_constraint` aux éléments de pool de structures, qui limite leur placement en évaluant une fonction de densité aux coins de leur boîte englobante
+  - Ajout du tag de fluides `#swimmable`, qui définit les fluides dans lesquels les joueurs peuvent nager
+  - Ajout du tag d'objets `#sulfur_cube_archetype/cold`, qui définit les objets transformant un cube de soufre en son archétype froid
+  - Ajout des tags de types d'entités `#swimming` et `#flying`, qui définissent respectivement les types d'entités considérés comme nageant dans l'eau ou comme volant
+- RP version 101.0 :
+  - Ajout de la texture `block/snow_bricks.png` des briques de neige et de l'événement sonore `block.ice_crystal.ambient` des cristaux de glace
+  - Suppression du modèle de bloc `block/cube_top`
+- [41 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%206)
