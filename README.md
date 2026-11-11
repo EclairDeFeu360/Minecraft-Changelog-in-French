@@ -1,34 +1,19 @@
-![Ari se tient près d'un jukebox diffusant un morceau, dans une galerie à piliers construite avec les nouveaux blocs de calcite.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap7/image.png)
-## [Minecraft 26.4 Snapshot 7](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-7)
-- Ajout d'ensembles de blocs en calcite :
-  - La calcite possède maintenant des variantes en pilier, dalle, escalier et muret
-  - La calcite polie se fabrique avec quatre blocs de calcite disposés en carré et possède des variantes en dalle, escalier et muret
-  - Les briques de calcite polie se fabriquent avec quatre blocs de calcite polie disposés en carré et possèdent également ces trois variantes
-  - Toutes ces variantes peuvent être fabriquées au tailleur de pierre
-  - La calcite, la calcite polie et les briques de calcite polie correspondent à l'archétype de cube de soufre lent et rebondissant
-- Ajout du disque de musique "Flurry" de Hyper Potions, trouvable dans les coffres du sous-sol des igloos et produisant un signal de comparateur de 7 dans un jukebox
-- Ajout du bloc de schiste des âmes scuplté
-- Modification du panorama du menu principal
-- Être en feu protège maintenant de l'effet Gel de la même manière qu'une armure en cuir
-- Porter au moins une pièce d'armure en cuir empêche maintenant les zombies et les squelettes de devenir des Givrés ou des Vagabonds
-- Les Vagabonds peuvent maintenant apparaître dans les océans gelés et leurs variantes profondes, les pics gelés ou dentelés, les rivières gelées et les pentes enneigées
-- Lorsque le réglage vidéo API graphique est défini sur Par défaut, le jeu choisit maintenant aléatoirement OpenGL ou Vulkan à chaque démarrage
-- Les boutons Jouer des menus Realms sont maintenant violets
-- Amélioration de la navigation au clavier dans les interfaces :
-  - Les écrans de jeu, comme les établis, peuvent maintenant être parcourus et utilisés au clavier, à l'exception de l'inventaire Créatif et du livre de recettes
-  - Tabulation sélectionne les groupes d'emplacements, les flèches se déplacent à l'intérieur et Entrée ou Espace permettent d'effectuer les actions de la souris
-  - Le narrateur lit maintenant le contenu, l'infobulle, le nom et la position des emplacements ainsi que les instructions de navigation
-  - Le curseur est masqué pendant la navigation au clavier et les flèches sélectionnent désormais les champs de saisie sans les éditer, contrairement à Tabulation
-- DP version 126.0 :
-  - La commande `/effect` accepte maintenant les tags d'effets de statut
-  - Les arguments temporels sont maintenant refusés lorsque leur valeur en ticks dépasse 2 147 483 647
-  - Les mondes de débogage :
-    - Peuvent maintenant être modifiés normalement et contiennent un exemplaire de chaque type d'entité, avec une version bébé lorsqu'elle existe
-    - Ils se chargent avec les ticks gelés en difficulté Normale et avec les règles de jeu `advance_time`, `advance_weather`, `spawn_wandering_traders` et `tnt_explodes` désactivées
-    - Leurs blocs ne sont plus actualisés automatiquement ; un nouveau monde doit être créé pour afficher les nouveaux blocs
-  - Suppression des tags de types d'entités inutilisés `#swimming` et `#flying` ainsi que de l'ensemble de sons de blocs `minecraft:twisting_vines`
-- RP version 102.0 :
-  - Les cinq textures de stalactites de glace `block/icicle_down_*.png` ont été renommées en retirant `down_` de leur nom
-  - Ajout des textures des nouveaux blocs de calcite et du disque de musique "Flurry"
-  - Ajout de l'événement sonore `entity.parrot.imitate.frostbite`, joué lorsqu'un perroquet imite un Givré
-- [53 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%207)
+![Noor combat l'Ender Dragon à l'arbalète au milieu de son souffle.](https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg)
+## [Minecraft 26.4 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-8)
+- Ajout du javanais et du chavacano de Zamboanga
+- Correction des déplacements de l'Ender Dragon
+- Regroupement de la neige et des blocs de neige avec les briques de neige dans l'inventaire Créatif
+- Les morts-vivants sont immunisés au Gel
+- Réduction des dégâts des glaçons
+- L'archétype froid du cube de soufre ne flotte plus
+- DP version 127.0 :
+  - La plupart des problèmes de validation n'empêchent plus le chargement des éléments
+  - Les appels récursifs et les valeurs contextuelles requises manquantes constituent des erreurs pouvant empêcher le chargement des packs ou la compilation des commandes
+  - Séparation du contexte `minecraft:command` en `minecraft:command_predicate` pour les prédicats et `minecraft:command_modifier` pour les modificateurs d'objets
+  - Ajout d'un argument de commande acceptant les expressions régulières
+  - Ajout des tags de blocs `#triggers_ambient_ice_block_sounds` et `#triggers_ambient_ice_crystal_sounds`, déclenchant respectivement les sons ambiants de la glace et des cristaux de glace
+- RP version 103.0 :
+  - Ajout de la texture d'onglet sélectionné `friends/tab_focused.png` et du son `entity.frostbite.throw` des lancers de glaçons des Givrés
+  - Adaptation des shaders de transparence et du masque d'eau des bateaux aux sous-passes
+- La synchronisation des positions des entités transmet la rotation de tête en pleine précision
+- [43 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%208)
