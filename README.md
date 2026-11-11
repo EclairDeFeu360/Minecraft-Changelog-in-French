@@ -1,4 +1,4 @@
-![Noor combat l'Ender Dragon à l'arbalète au milieu de son souffle.](https://www.minecraft.net/content/dam/minecraftnet/article-asset/2026/minecraft-26-4-snapshot-8/new-article-hero-image.jpg)
+![Noor combat l'Ender Dragon à l'arbalète au milieu de son souffle.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap8/image.png)
 ## [Minecraft 26.4 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-8)
 - Ajout du javanais et du chavacano de Zamboanga
 - Correction des déplacements de l'Ender Dragon
