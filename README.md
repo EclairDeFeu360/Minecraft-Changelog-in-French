@@ -1,19 +1,25 @@
-![Noor combat l'Ender Dragon à l'arbalète au milieu de son souffle.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap8/image.png)
-## [Minecraft 26.4 Snapshot 8](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-8)
-- Ajout du javanais et du chavacano de Zamboanga
-- Correction des déplacements de l'Ender Dragon
-- Regroupement de la neige et des blocs de neige avec les briques de neige dans l'inventaire Créatif
-- Les morts-vivants sont immunisés au Gel
-- Réduction des dégâts des glaçons
-- L'archétype froid du cube de soufre ne flotte plus
-- DP version 127.0 :
-  - La plupart des problèmes de validation n'empêchent plus le chargement des éléments
-  - Les appels récursifs et les valeurs contextuelles requises manquantes constituent des erreurs pouvant empêcher le chargement des packs ou la compilation des commandes
-  - Séparation du contexte `minecraft:command` en `minecraft:command_predicate` pour les prédicats et `minecraft:command_modifier` pour les modificateurs d'objets
-  - Ajout d'un argument de commande acceptant les expressions régulières
-  - Ajout des tags de blocs `#triggers_ambient_ice_block_sounds` et `#triggers_ambient_ice_crystal_sounds`, déclenchant respectivement les sons ambiants de la glace et des cristaux de glace
-- RP version 103.0 :
-  - Ajout de la texture d'onglet sélectionné `friends/tab_focused.png` et du son `entity.frostbite.throw` des lancers de glaçons des Givrés
-  - Adaptation des shaders de transparence et du masque d'eau des bateaux aux sous-passes
-- La synchronisation des positions des entités transmet la rotation de tête en pleine précision
-- [43 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%208)
+![Alex utilise un distributeur pour tirer une flèche enflammée sur un bloc de TNT.](https://github.com/EclairDeFeu360/Minecraft-Changelog-in-French/blob/26.4-snap9/image.png)
+## [Minecraft 26.4 Snapshot 9 & 10](https://www.minecraft.net/en-us/article/minecraft-26-4-snapshot-9)
+- Vulkan devient l'API graphique par défaut et n'est plus expérimental
+- Ajout du réglage « Brouillard amélioré », indépendant de « Transparence améliorée » et activé par défaut sauf avec les graphismes Rapides
+- L'accélération des cochons et des arpenteurs dure entre 7 et 35 secondes
+- Le feu et le feu des âmes émettent un son d'extinction lorsqu'ils sont détruits
+- Le livre de recettes et l'inventaire Créatif sont utilisables au clavier et lus par le narrateur
+- Les onglets du livre de recettes affichent leur catégorie en infobulle et les recettes sont surlignées au survol ou à la sélection
+- La touche de répétition, R par défaut, répète la dernière recette ou le dernier échange
+- Actualisation plus fiable de la disponibilité des amis
+- DP version 128.0 :
+  - Ajout du registre `dispense_behavior` et du composant `minecraft:dispense_behavior`, qui personnalisent les actions des distributeurs, essayées successivement jusqu'à ce que l'une réussisse
+  - Les objets de bateaux et de wagonnets possèdent maintenant par défaut le composant `minecraft:entity_data`, déterminant l'entité placée
+  - Les commandes `/forceload`, `/spreadplayers` et `/worldborder center` acceptent les coordonnées locales 2D
+  - Ajout du transformateur de blocs `minecraft:honeycomb`, qui permet de cirer des blocs depuis un distributeur
+  - Ajout du champ `radius` à la particule `minecraft:current_down`, qui définit son rayon d'apparition autour de la position indiquée
+  - Ajout du champ optionnel `pop_chance` à la particule `minecraft:bubble_column_up`, qui définit la probabilité d'émettre une particule et un son d'éclatement à la fin de sa durée de vie
+  - Les champs de saisie des dialogues affichent le texte en rouge et une infobulle d'avertissement lorsqu'une adresse e-mail semble être saisie
+- RP version 104.0 :
+  - Les clés de traduction commençant par `menu.custom_options` ou `menu.custom_screen_info` ne sont plus remplaçables
+  - Ajout des textures `recipe_book/slot_highlight_back.png` et `recipe_book/slot_highlight_front.png` pour surligner les recettes
+- Modification de l'établissement des clés de chiffrement à la connexion
+- Ajout de la propriété serveur `key-rotation-period-seconds`, définissant l'intervalle minimal de renouvellement des clés, par défaut 60 secondes
+- [65 bugs fixés](https://mojira.dev/?project=MC&fix_version=26.4%20Snapshot%209)
+- Bug fixé pour la Snapshot 10 : [MC-313265](https://mojira.dev/MC-313265) - Le jeu plante lorsque l'on fait défiler le menu multijoueur
